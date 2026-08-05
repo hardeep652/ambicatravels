@@ -296,3 +296,102 @@ export const CONTACT = {
   mapsEmbedSrc:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.918!2d72.5566!3d23.0339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDAyJzAyLjAiTiA3MsKwMzMnMjMuOCJF!5e0!3m2!1sen!2sin!4v1700000000000",
 };
+
+// ---------------------------------------------------------------------------
+// Everything below is NEW — append it to the end of your existing data.ts.
+// These three sections (How It Works, FAQs, Trust Badges) don't have a home
+// in your current @/types file, so their types are declared locally here.
+// Your existing PACKAGES, SERVICES, TESTIMONIALS, and GALLERY arrays are
+// reused as-is for the new homepage preview sections — no duplicates needed.
+// ---------------------------------------------------------------------------
+
+export type ProcessStep = {
+  id: string;
+  title: string;
+  description: string;
+  icon: "phone" | "clipboard" | "card" | "plane";
+};
+
+export const HOW_IT_WORKS: ProcessStep[] = [
+  {
+    id: "enquire",
+    title: "Tell us your plan",
+    description:
+      "Share where you want to go, your dates, and your budget — call, WhatsApp, or the form.",
+    icon: "phone",
+  },
+  {
+    id: "itinerary",
+    title: "Get a tailored itinerary",
+    description:
+      "We reply within one working day with a clear, itemized plan — no vague packages.",
+    icon: "clipboard",
+  },
+  {
+    id: "confirm",
+    title: "Confirm & pay securely",
+    description:
+      "Simple payment terms, transparent pricing, and a confirmed booking in writing.",
+    icon: "card",
+  },
+  {
+    id: "travel",
+    title: "Travel with support",
+    description:
+      "24x7 support during your trip — someone always picks up if something needs sorting.",
+    icon: "plane",
+  },
+];
+
+export type FAQItem = {
+  id: string;
+  question: string;
+  answer: string;
+};
+
+export const FAQS: FAQItem[] = [
+  {
+    id: "booking-window",
+    question: "How far in advance should I book a holiday package?",
+    answer:
+      "For domestic trips, 3-4 weeks ahead gives us the best hotel and transport rates. For international holidays or peak season, we'd recommend 6-8 weeks to also allow time for visa processing.",
+  },
+  {
+    id: "customization",
+    question: "Do you customize packages, or are they fixed?",
+    answer:
+      "Every package on our site is a starting template. We adjust hotels, duration, add-ons, and pace to fit your group and budget — most bookings end up customized in some way.",
+  },
+  {
+    id: "cancellation",
+    question: "What's your cancellation and refund policy?",
+    answer:
+      "Cancellation terms depend on the hotels, airlines, and transport booked for your specific trip, since each has its own policy. We always share the exact terms in writing before you confirm payment.",
+  },
+  {
+    id: "visa",
+    question: "Do you help with visas for international trips?",
+    answer:
+      "Yes — we assist with documentation, application forms, and appointment scheduling. Visa approval itself is at the consulate's discretion, but we make sure your file is complete and submitted correctly.",
+  },
+  {
+    id: "transport-only",
+    question: "Can you arrange transport only, without a full package?",
+    answer:
+      "Absolutely. Car rental and bus rental bookings are available on their own, separate from our holiday packages.",
+  },
+];
+
+export type TrustBadge = {
+  id: string;
+  label: string;
+};
+
+// IMPORTANT: only keep the badges that reflect real, current certifications —
+// remove or edit any that don't apply before this goes live.
+export const TRUST_BADGES: TrustBadge[] = [
+  { id: "iata", label: "IATA Accredited" },
+  { id: "taai", label: "TAAI Member" },
+  { id: "iso", label: "ISO 9001:2015" },
+  { id: "secure-payments", label: "Razorpay Secured Payments" },
+];
