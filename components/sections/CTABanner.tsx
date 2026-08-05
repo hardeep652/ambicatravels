@@ -34,7 +34,7 @@ export function CTABanner() {
 
         <Reveal delay={0.1} className="flex w-full flex-col gap-4 sm:w-auto sm:flex-row">
           <Button asChild size="lg" variant="emerald">
-            <Link href="#contact">
+            <Link href="/contact">
               Get a Free Quote
               <ArrowRight className="h-4 w-4" />
             </Link>

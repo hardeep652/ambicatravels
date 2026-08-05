@@ -94,7 +94,7 @@ export function FeaturedPackages() {
                 </div>
 
                 <Button asChild variant="outlineDark" className="mt-5 w-full">
-                  <Link href="#contact">Inquire Now</Link>
+                  <Link href="/contact">Inquire Now</Link>
                 </Button>
               </div>
             </motion.article>

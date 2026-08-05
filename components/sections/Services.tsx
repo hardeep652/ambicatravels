@@ -69,7 +69,7 @@ export function Services() {
                   </ul>
 
                   <Link
-                    href="#contact"
+                    href="/contact"
                     className="mt-7 inline-flex items-center gap-1.5 text-sm font-semibold text-sky-600 transition-colors hover:text-sky-700"
                   >
                     Enquire about {service.title}

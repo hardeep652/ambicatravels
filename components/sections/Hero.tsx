@@ -313,7 +313,7 @@ export function Hero() {
             className="inline-block"
           >
             <Button asChild size="lg" variant="emerald">
-              <Link href="#packages">
+              <Link href="/packages">
                 Explore Packages
                 <ArrowRight className="h-4 w-4" />
               </Link>
@@ -326,7 +326,7 @@ export function Hero() {
             className="inline-block"
           >
             <Button asChild size="lg" variant="outline">
-              <Link href="#contact">
+              <Link href="/contact">
                 <MessageCircle className="h-4 w-4" />
                 Contact Us
               </Link>
