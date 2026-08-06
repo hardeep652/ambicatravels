@@ -8,7 +8,7 @@ import { PackagesPreview } from "@/components/sections/PackagesPreview";
 import { TrustBadges } from "@/components/sections/TrustBadges";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { GalleryPreview } from "@/components/sections/GalleryPreview";
-import { TestimonialsPreview } from "@/components/sections/TestimonialsPreview";
+import { Testimonials } from "@/components/sections/Testimonials";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { Metadata } from "next";
 
@@ -31,7 +31,7 @@ export default function Home() {
         <TrustBadges />
         <HowItWorks />
         <GalleryPreview />
-        <TestimonialsPreview />
+        <Testimonials />
         <CTABanner />
       </main>
       <Footer />
