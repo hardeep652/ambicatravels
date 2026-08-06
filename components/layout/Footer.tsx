@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   Compass,
   Facebook,
@@ -27,9 +28,13 @@ export function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2.5">
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10">
-                <Compass className="h-5 w-5 text-emerald-400" strokeWidth={2.25} />
-              </span>
+              <Image
+                src="/AT.svg"
+                alt="Ambica Travels logo"
+                width={40}
+                height={40}
+                className="rounded-xl bg-white/10"
+              />
               <span className="font-heading text-xl font-semibold">
                 Ambica <span className="text-sky-400">Travels</span>
               </span>
