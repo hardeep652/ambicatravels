@@ -3,6 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Services } from "@/components/sections/Services";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { Metadata } from "next";
+import { FAQSection } from "@/components/sections/FAQSection";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -15,6 +16,7 @@ export default function ServicesPage() {
       <Navbar />
       <main>
         <Services />
+        <FAQSection />
         <CTABanner />
       </main>
       <Footer />

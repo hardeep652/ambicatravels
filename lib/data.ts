@@ -395,3 +395,4 @@ export const TRUST_BADGES: TrustBadge[] = [
   { id: "iso", label: "ISO 9001:2015" },
   { id: "secure-payments", label: "Razorpay Secured Payments" },
 ];
+

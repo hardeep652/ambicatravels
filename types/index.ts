@@ -60,3 +60,4 @@ export interface SocialLink {
   href: string;
   icon: "instagram" | "facebook" | "twitter" | "youtube";
 }
+
