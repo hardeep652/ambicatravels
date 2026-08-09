@@ -74,7 +74,6 @@ export function WhyChooseUs() {
               </div>
               <div>
                 <p className="font-heading text-lg font-semibold text-navy-900">4.9/5</p>
-                <p className="text-xs text-navy-500">from 3,200+ reviews</p>
               </div>
             </div>
           </div>

@@ -27,17 +27,14 @@ export function Footer() {
         <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr_0.8fr_1.2fr]">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2.5">
+            <div className="flex items-center">
               <Image
-                src="/AT.svg"
+                src="/AT.png"
                 alt="Ambica Travels logo"
-                width={40}
-                height={40}
-                className="rounded-xl bg-white/10"
+                width={170}
+                height={50}
+                className="h-10 w-auto object-contain [filter:drop-shadow(0_2px_8px_rgba(255,255,255,0.15))]"
               />
-              <span className="font-heading text-xl font-semibold">
-                Ambica <span className="text-sky-400">Travels</span>
-              </span>
             </div>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/60">
               Car rentals, coach hire and fully-escorted holidays, planned by

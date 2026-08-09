@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Compass, Menu, Phone, X } from "lucide-react";
+import { Menu, Phone, X } from "lucide-react";
 import Image from "next/image";
 import { NAV_LINKS, CONTACT } from "@/lib/data";
 import { Button } from "@/components/ui/button";
@@ -15,9 +15,6 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
-  // Only the homepage has a dark hero behind the navbar, so only there
-  // do we start transparent-with-white-text. Every other page gets the
-  // solid/opaque navbar from the very first paint so it's always visible.
   const hasHero = pathname === "/";
   const transparent = hasHero && !scrolled;
 
@@ -55,26 +52,22 @@ export function Navbar() {
           transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
           className="container-px mx-auto flex max-w-7xl items-center justify-between"
         >
-          <Link
-            href="/"
-            className="group flex items-center gap-2.5 font-heading text-xl font-semibold tracking-tight"
-          >
+          {/* Logo - Left */}
+          <Link href="/" className="group flex shrink-0 items-center">
             <Image
-              src="/AT.svg"
+              src="/AT.png"
               alt="Ambica Travels logo"
-              width={40}
-              height={40}
+              width={170}
+              height={50}
               className={cn(
-                "transition-all duration-400 ease-out group-hover:scale-105 group-hover:shadow-[0_4px_16px_rgba(15,23,42,0.25)]",
-                scrolled ? "h-8 w-8" : "h-10 w-10"
+                "object-contain transition-all duration-400 ease-out group-hover:scale-105 [filter:drop-shadow(0_2px_8px_rgba(15,23,42,0.18))]",
+                scrolled ? "h-8 w-auto" : "h-10 w-auto"
               )}
             />
-            <span className={cn("transition-colors duration-300", transparent ? "text-white" : "text-navy-900")}>
-              Ambica <span className="text-sky-500">Travels</span>
-            </span>
           </Link>
 
-          <ul className="hidden items-center gap-1 lg:flex">
+          {/* Nav Links - Center */}
+          <ul className="hidden items-center gap-1 lg:flex lg:gap-2">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
                 <Link
@@ -92,6 +85,7 @@ export function Navbar() {
             ))}
           </ul>
 
+          {/* Phone + Button - Right */}
           <div className="hidden items-center gap-4 lg:flex">
             <a
               href={`tel:${CONTACT.phone.replace(/\s/g, "")}`}
@@ -116,13 +110,14 @@ export function Navbar() {
             </Button>
           </div>
 
+          {/* Mobile Menu Button */}
           <button
             type="button"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
             className={cn(
-              "flex h-11 w-11 items-center justify-center rounded-full transition-all duration-300 ease-out hover:scale-105 active:scale-95 lg:hidden",
+              "flex h-11 w-11 shrink-0 items-center justify-center rounded-full transition-all duration-300 ease-out hover:scale-105 active:scale-95 lg:hidden",
               transparent ? "text-white bg-white/10" : "text-navy-900 bg-navy-50"
             )}
           >
