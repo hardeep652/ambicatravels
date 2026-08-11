@@ -26,7 +26,7 @@ export function AboutUs() {
             </p>
             <p className="mt-4 text-lg leading-relaxed text-navy-600">
               Today, more than 25,000 happy travelers trust us with their journeys — from weekend getaways to
-              multi‑country honeymoons. We are proud members of IATA, TAAI and hold ISO 9001:2015 certification,
+              multi‑country honeymoons. We are proud members of IATA, TAAI and hold ISO 9001:2015 certification,
               reinforcing our commitment to quality and reliability.
             </p>
           </div>
@@ -40,7 +40,68 @@ export function AboutUs() {
           </div>
         </div>
 
+        {/* Founders */}
+        <div className="mt-20">
+          <SectionHeading
+            eyebrow="Leadership"
+            title="Meet the Founders"
+            description="The people behind Ambica Travels' journey from a single desk to a full-service travel partner."
+          />
 
+          <div className="mt-12 grid gap-8 sm:grid-cols-2 max-w-4xl mx-auto">
+            {/* Founder */}
+            <div className="rounded-3xl overflow-hidden shadow-xl bg-navy-50 text-center">
+              <div className="relative w-full h-[320px] bg-navy-100 flex items-center justify-center">
+                {/* Replace src with the founder's photo */}
+                <img
+                  src="https://placehold.co/600x600/e2e8f0/64748b?text=Founder+Photo"
+                  alt="Founder of Ambica Travels"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-navy-900">
+                  {/* Founder name */}
+                  Founder Name
+                </h3>
+                <p className="mt-1 text-sm font-medium text-navy-500">
+                  Founder & CEO
+                </p>
+                <p className="mt-3 text-navy-600 leading-relaxed">
+                  {/* Founder bio placeholder */}
+                  A short bio about the founder — their background, what led them
+                  to start Ambica Travels, and their vision for the company.
+                </p>
+              </div>
+            </div>
+
+            {/* Co-founder */}
+            <div className="rounded-3xl overflow-hidden shadow-xl bg-navy-50 text-center">
+              <div className="relative w-full h-[320px] bg-navy-100 flex items-center justify-center">
+                {/* Replace src with the co-founder's photo */}
+                <img
+                  src="https://placehold.co/600x600/e2e8f0/64748b?text=Co-Founder+Photo"
+                  alt="Co-founder of Ambica Travels"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-navy-900">
+                  {/* Co-founder name */}
+                  Co-Founder Name
+                </h3>
+                <p className="mt-1 text-sm font-medium text-navy-500">
+                  Co-Founder & Director
+                </p>
+                <p className="mt-3 text-navy-600 leading-relaxed">
+                  {/* Co-founder bio placeholder */}
+                  A short bio about the co-founder — their role in the business,
+                  areas of expertise, and what they bring to the team.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
