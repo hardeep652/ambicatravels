@@ -61,3 +61,48 @@ export interface SocialLink {
   icon: "instagram" | "facebook" | "twitter" | "youtube";
 }
 
+export interface CarItem {
+  id: string;
+  name: string;
+  category: "Sedan" | "SUV" | "Premium" | "Hatchback";
+  seating: number;
+  transmission: "Manual" | "Automatic";
+  fuelType: "Petrol" | "Diesel" | "CNG" | "Electric";
+  image: string;
+  description: string;
+  pricePerDay?: number;
+  pricePerKm?: number;
+}
+
+export interface BusItem {
+  id: string;
+  name: string;
+  category: "Mini Bus" | "Traveller" | "Luxury Bus" | "Sleeper Bus" | "Large Bus";
+  seating: number;
+  ac: boolean;
+  image: string;
+  description: string;
+  pricePerDay?: number;
+  pricePerKm?: number;
+}
+
+export interface CarRentalEnquiryData {
+  personalDetails: {
+    fullName: string;
+    mobileNumber: string;
+    email: string;
+  };
+  tripDetails: {
+    pickupLocation: string;
+    destination: string;
+    pickupDate: string;
+    returnDate: string;
+  };
+  rentalPreferences: {
+    selectedCarId: string;
+    rentalType: "Self Drive" | "With Driver";
+    passengers: number;
+    additionalMessage: string;
+  };
+}
+
