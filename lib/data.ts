@@ -406,7 +406,7 @@ export const CARS: CarItem[] = [
     seating: 7,
     transmission: "Manual",
     fuelType: "Diesel",
-    image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=800&auto=format&fit=crop",
+    image: "https://res.cloudinary.com/ozr2ckrb/image/upload/v1786617733/ChatGPT_Image_Aug_12_2026_11_14_43_PM.png",
     description:
       "Spacious and comfortable Toyota Innova Crysta, ideal for family trips, tours, and long-distance travel. Offers a comfortable interior, AC facility, and a smooth and reliable travel experience.",
   },
