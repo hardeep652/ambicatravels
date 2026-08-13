@@ -419,7 +419,7 @@ export const BUSES: BusItem[] = [
     category: "Traveller",
     seating: 17,
     ac: true,
-    image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=800&auto=format&fit=crop",
+    image: "https://res.cloudinary.com/ozr2ckrb/image/upload/v1786618162/ChatGPT_Image_Aug_12_2026_11_17_33_PM.png",
     description:
       "Comfortable and spacious Force Traveller with premium reclining seats, air-conditioning, ample interior space, and a smooth travel experience. Ideal for family trips, group tours, outstation travel, and long-distance journeys.",
   },
@@ -429,7 +429,7 @@ export const BUSES: BusItem[] = [
     category: "Traveller",
     seating: 17,
     ac: true,
-    image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=800&auto=format&fit=crop",
+    image: "https://res.cloudinary.com/ozr2ckrb/image/upload/v1786618170/ChatGPT_Image_Aug_12_2026_11_17_21_PM.png",
     description:
       "Premium Force Urbania with comfortable reclining seats, air conditioning, spacious interiors, large windows with curtains, and a smooth travel experience. Ideal for family trips, group tours, corporate travel, and long-distance journeys.",
   },
@@ -439,7 +439,7 @@ export const BUSES: BusItem[] = [
     category: "Luxury Bus",
     seating: 35,
     ac: true,
-    image: "https://images.unsplash.com/photo-1556122071-e404eaedb77f?q=80&w=800&auto=format&fit=crop",
+    image: "https://res.cloudinary.com/ozr2ckrb/image/upload/v1786618257/ChatGPT_Image_Aug_12_2026_11_34_43_PM.png",
     description:
       "Premium luxury tourist bus featuring comfortable pushback seats, air conditioning, spacious legroom, premium interiors, and a refined travel experience. Ideal for family trips, group tours, pilgrimage journeys, and outstation travel.",
   },
@@ -449,7 +449,7 @@ export const BUSES: BusItem[] = [
     category: "Luxury Bus",
     seating: 45,
     ac: true,
-    image: "https://images.unsplash.com/photo-1556122071-e404eaedb77f?q=80&w=800&auto=format&fit=crop",
+    image: "https://res.cloudinary.com/ozr2ckrb/image/upload/v1786618257/ChatGPT_Image_Aug_12_2026_11_32_44_PM.png",
     description:
       "Premium Mercedes-Benz luxury tourist coach featuring luxury seating, spacious interiors, powerful air conditioning, comfortable pushback seats, and a smooth and safe travel experience. Ideal for family trips, group tours, pilgrimage journeys, corporate travel, and long-distance travel.",
   },
@@ -459,7 +459,7 @@ export const BUSES: BusItem[] = [
     category: "Luxury Bus",
     seating: 45,
     ac: true,
-    image: "https://images.unsplash.com/photo-1556122071-e404eaedb77f?q=80&w=800&auto=format&fit=crop",
+    image: "https://res.cloudinary.com/ozr2ckrb/image/upload/v1786618260/ChatGPT_Image_Aug_12_2026_11_26_05_PM.png",
     description:
       "Premium Mercedes-Benz tourist coach designed for comfortable and memorable journeys, featuring spacious seating, air conditioning, premium interiors, and a smooth travel experience. Ideal for group tours, family trips, pilgrimage journeys, and long-distance travel.",
   },
@@ -469,7 +469,7 @@ export const BUSES: BusItem[] = [
     category: "Luxury Bus",
     seating: 45,
     ac: true,
-    image: "https://images.unsplash.com/photo-1556122071-e404eaedb77f?q=80&w=800&auto=format&fit=crop",
+    image: "https://res.cloudinary.com/ozr2ckrb/image/upload/v1786618264/ChatGPT_Image_Aug_12_2026_11_30_03_PM.png",
     description:
       "Premium Ambica luxury tourist coach featuring comfortable luxury seating, air conditioning, spacious interiors, curtains, and a smooth and reliable travel experience. Ideal for family trips, group tours, pilgrimage journeys, and long-distance outstation travel.",
   },
