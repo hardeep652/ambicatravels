@@ -5,6 +5,7 @@ import { AnimatedCounter } from "@/components/ui/animated-counter";
 import { StaggerGroup, staggerItem } from "@/components/ui/reveal";
 import { motion } from "framer-motion";
 
+
 export function Stats() {
   return (
     <section className="relative -mt-20 z-10">

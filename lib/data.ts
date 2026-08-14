@@ -6,6 +6,8 @@ import type {
   StatItem,
   Testimonial,
   WhyChooseItem,
+  CarItem,
+  BusItem,
 } from "@/types";
 
 export const NAV_LINKS: NavLink[] = [
@@ -222,7 +224,7 @@ export const CONTACT = {
   phone: "+91 98765 43210",
   whatsapp: "+91 98765 43210",
   email: "hello@ambicatravels.com",
-  address: "204, Shanti Arcade, C.G. Road, Navrangpura, Ahmedabad, Gujarat 380009",
+  address: "204, Shanti Arcade, C.G. Road, Navrangpura, Ahmedabad, Gujarat 403 4th floor, Dream Square, complex, under bridge, opp. Ramdevpir mandir, Akhbar Nagar, Nirnay Nagar, Ahmedabad, Gujarat 380013",
   mapsEmbedSrc:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.918!2d72.5566!3d23.0339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDAyJzAyLjAiTiA3MsKwMzMnMjMuOCJF!5e0!3m2!1sen!2sin!4v1700000000000",
 };
@@ -325,3 +327,81 @@ export const TRUST_BADGES: TrustBadge[] = [
   { id: "iso", label: "ISO 9001:2015" },
   { id: "secure-payments", label: "Razorpay Secured Payments" },
 ];
+
+export const CARS: CarItem[] = [
+  {
+    id: "toyota-innova-crysta",
+    name: "Toyota Innova Crysta",
+    category: "Premium",
+    seating: 7,
+    transmission: "Manual",
+    fuelType: "Diesel",
+    image: "https://res.cloudinary.com/ozr2ckrb/image/upload/v1786617733/ChatGPT_Image_Aug_12_2026_11_14_43_PM.png",
+    description:
+      "Spacious and comfortable Toyota Innova Crysta, ideal for family trips, tours, and long-distance travel. Offers a comfortable interior, AC facility, and a smooth and reliable travel experience.",
+  },
+];
+
+export const BUSES: BusItem[] = [
+  {
+    id: "force-traveller",
+    name: "Force Traveller",
+    category: "Traveller",
+    seating: 17,
+    ac: true,
+    image: "https://res.cloudinary.com/ozr2ckrb/image/upload/v1786618162/ChatGPT_Image_Aug_12_2026_11_17_33_PM.png",
+    description:
+      "Comfortable and spacious Force Traveller with premium reclining seats, air-conditioning, ample interior space, and a smooth travel experience. Ideal for family trips, group tours, outstation travel, and long-distance journeys.",
+  },
+  {
+    id: "force-urbania",
+    name: "Force Urbania",
+    category: "Traveller",
+    seating: 17,
+    ac: true,
+    image: "https://res.cloudinary.com/ozr2ckrb/image/upload/v1786618170/ChatGPT_Image_Aug_12_2026_11_17_21_PM.png",
+    description:
+      "Premium Force Urbania with comfortable reclining seats, air conditioning, spacious interiors, large windows with curtains, and a smooth travel experience. Ideal for family trips, group tours, corporate travel, and long-distance journeys.",
+  },
+  {
+    id: "ambica-luxury-tourist-bus",
+    name: "Ambica Luxury Tourist Bus",
+    category: "Luxury Bus",
+    seating: 35,
+    ac: true,
+    image: "https://res.cloudinary.com/ozr2ckrb/image/upload/v1786618741/ChatGPT_Image_Aug_13_2026_04_28_10_PM.png",
+    description:
+      "Premium luxury tourist bus featuring comfortable pushback seats, air conditioning, spacious legroom, premium interiors, and a refined travel experience. Ideal for family trips, group tours, pilgrimage journeys, and outstation travel.",
+  },
+  {
+    id: "ambica-mercedes-luxury-coach",
+    name: "Ambica Mercedes Luxury Coach",
+    category: "Luxury Bus",
+    seating: 45,
+    ac: true,
+    image: "https://res.cloudinary.com/ozr2ckrb/image/upload/v1786618842/ChatGPT_Image_Aug_13_2026_04_30_24_PM.png",
+    description:
+      "Premium Mercedes-Benz luxury tourist coach featuring luxury seating, spacious interiors, powerful air conditioning, comfortable pushback seats, and a smooth and safe travel experience. Ideal for family trips, group tours, pilgrimage journeys, corporate travel, and long-distance travel.",
+  },
+  {
+    id: "ambica-mercedes-tourist-coach",
+    name: "Ambica Mercedes Tourist Coach",
+    category: "Luxury Bus",
+    seating: 45,
+    ac: true,
+    image: "https://res.cloudinary.com/ozr2ckrb/image/upload/v1786619032/ambica_bus_collage_no_text.png",
+    description:
+      "Premium Mercedes-Benz tourist coach designed for comfortable and memorable journeys, featuring spacious seating, air conditioning, premium interiors, and a smooth travel experience. Ideal for group tours, family trips, pilgrimage journeys, and long-distance travel.",
+  },
+  {
+    id: "ambica-luxury-tourist-coach-2",
+    name: "Ambica Luxury Tourist Coach",
+    category: "Luxury Bus",
+    seating: 45,
+    ac: true,
+    image: "https://res.cloudinary.com/ozr2ckrb/image/upload/v1786619131/ambica_bus_second_collage_no_text.png",
+    description:
+      "Premium Ambica luxury tourist coach featuring comfortable luxury seating, air conditioning, spacious interiors, curtains, and a smooth and reliable travel experience. Ideal for family trips, group tours, pilgrimage journeys, and long-distance outstation travel.",
+  },
+];
+

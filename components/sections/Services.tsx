@@ -168,7 +168,13 @@ export function Services() {
                     ))}
                   </ul>
                   <Link
-                    href="/contact"
+                    href={
+                      service.id === "car-rental"
+                        ? "/car-rental"
+                        : service.id === "bus-rental"
+                          ? "/bus-rental"
+                          : "/contact"
+                    }
                     className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-sky-600 transition-colors hover:text-sky-700"
                   >
                     Enquire about {service.title}
