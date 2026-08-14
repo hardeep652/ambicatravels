@@ -1,48 +1,128 @@
-# Ambica Travels — Home Page
+# Ambica Travels
 
-A premium, production-ready travel agency home page built with Next.js App Router, TypeScript, Tailwind CSS, and Framer Motion.
+Marketing website plus an admin backend for managing travel packages with Next.js App Router, TypeScript, Prisma, PostgreSQL, Auth.js credentials auth, Zod, and Cloudinary.
 
-## Getting started
+## Setup
+
+1. Install dependencies.
 
 ```bash
 npm install
+```
+
+2. Copy environment variables and fill them in.
+
+```bash
+cp .env.example .env
+```
+
+3. Generate Prisma client and run migrations.
+
+```bash
+npm run db:generate
+npx prisma migrate dev --name init_admin_backend
+```
+
+4. Seed the first admin user.
+
+```bash
+npm run db:seed
+```
+
+5. Start the app.
+
+```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open `http://localhost:3000`.
 
-## Stack
+## Admin Routes
 
-- **Next.js 15** (App Router, Server Components by default)
-- **TypeScript**
-- **Tailwind CSS** — custom navy / sky / emerald palette defined in `tailwind.config.ts`
-- **Framer Motion** — scroll reveals, staggered grids, hero crossfade, animated counters
-- **Lucide React** — icon set
-- **next/image** — every image, including the hero carousel, is served through `next/image`
+- `/admin/login`
+- `/admin`
+- `/admin/packages`
+- `/admin/packages/new`
+- `/admin/packages/[id]/edit`
 
-## Structure
+## Public Package Routes
 
+- `/packages`
+- `/packages/[slug]`
+- `GET /api/packages`
+- `GET /api/packages/[slug]`
+- `GET /api/packages/featured`
+
+## Admin APIs
+
+- `GET /api/admin/packages`
+- `POST /api/admin/packages`
+- `GET /api/admin/packages/[id]`
+- `PUT /api/admin/packages/[id]`
+- `DELETE /api/admin/packages/[id]`
+- `POST /api/admin/upload`
+
+All `/api/admin/*` routes require an authenticated admin session.
+
+## Environment Variables
+
+Database and auth:
+
+- `DATABASE_URL`: Neon/PostgreSQL connection string
+- `AUTH_SECRET`: random secret for Auth.js sessions
+- `AUTH_TRUST_HOST`: set to `true` behind your deployment host
+
+Cloudinary:
+
+- `CLOUDINARY_CLOUD_NAME`
+- `CLOUDINARY_API_KEY`
+- `CLOUDINARY_API_SECRET`
+- `CLOUDINARY_PACKAGE_FOLDER`
+
+Seed admin:
+
+- `SEED_ADMIN_NAME`
+- `SEED_ADMIN_EMAIL`
+- `SEED_ADMIN_PASSWORD`
+
+Existing contact form mailer:
+
+- `SMTP_HOST`
+- `SMTP_PORT`
+- `SMTP_SECURE`
+- `SMTP_USER`
+- `SMTP_PASS`
+- `CONTACT_EMAIL_TO`
+
+## Prisma Commands
+
+Create the initial migration:
+
+```bash
+npx prisma migrate dev --name init_admin_backend
 ```
-app/
-  layout.tsx       Fonts (Poppins + Inter), SEO metadata
-  page.tsx          Assembles all home page sections
-  globals.css       Base styles, focus states, reduced-motion support
-components/
-  layout/           Navbar, Footer
-  sections/         Hero, Stats, Services, WhyChooseUs, FeaturedPackages,
-                     Testimonials, Gallery, CTABanner
-  ui/               Button, Reveal/StaggerGroup, AnimatedCounter,
-                     SectionHeading, StarRating
-lib/
-  data.ts           All copy, images and content — edit here to rebrand or re-content
-  utils.ts          cn() class merge helper
-types/
-  index.ts          Shared TypeScript interfaces
+
+Regenerate client after schema changes:
+
+```bash
+npm run db:generate
 ```
 
-## Notes for production
+Push schema without a migration:
 
-- **Images**: the hero, gallery and package photos currently point to Unsplash URLs for placeholder purposes. Swap these for licensed/brand photography in `lib/data.ts` before launch, and add your final image domain to `images.remotePatterns` in `next.config.ts`.
-- **Google Maps**: the footer embed uses a placeholder `src`. Replace `CONTACT.mapsEmbedSrc` in `lib/data.ts` with your actual "Embed a map" iframe URL from Google Maps.
-- **Forms/backend**: this build is frontend-only, as requested. "Inquire Now" and "Contact Us" currently link to the footer's contact block; wire them to a real form or CRM endpoint when ready.
-- **Fonts**: Poppins (headings) and Inter (body) are loaded via `next/font/google`, which self-hosts and preloads them — no extra configuration needed.
+```bash
+npm run db:push
+```
+
+Open Prisma Studio:
+
+```bash
+npx prisma studio
+```
+
+## Notes
+
+- Passwords are hashed with `bcryptjs` before admin records are stored.
+- Package slugs are enforced as unique in Prisma and validated with Zod.
+- Package thumbnails can be uploaded to Cloudinary or pasted directly as a URL.
+- If no packages are marked featured yet, the homepage preview falls back to the most recently updated packages.

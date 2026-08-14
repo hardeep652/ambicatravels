@@ -1,7 +1,6 @@
 import type {
   GalleryItem,
   NavLink,
-  PackageItem,
   ServiceItem,
   SocialLink,
   StatItem,
@@ -113,75 +112,6 @@ export const WHY_CHOOSE_US: WhyChooseItem[] = [
     description:
       "Verified local partners in 120+ destinations for the details that matter after landing.",
     icon: "map",
-  },
-];
-
-export const PACKAGES: PackageItem[] = [
-  {
-    id: "bali-indonesia",
-    destination: "Bali",
-    code: "DPS",
-    country: "Indonesia",
-    duration: "6 Days / 5 Nights",
-    image:
-      "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?q=80&w=1600&auto=format&fit=crop",
-    tags: ["Honeymoon", "Beaches"],
-    rating: 4.9,
-  },
-  {
-    id: "santorini-greece",
-    destination: "Santorini",
-    code: "JTR",
-    country: "Greece",
-    duration: "7 Days / 6 Nights",
-    image:
-      "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=1600&auto=format&fit=crop",
-    tags: ["Honeymoon", "Luxury"],
-    rating: 5.0,
-  },
-  {
-    id: "swiss-alps",
-    destination: "Interlaken",
-    code: "ZRH",
-    country: "Switzerland",
-    duration: "8 Days / 7 Nights",
-    image:
-      "https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=1600&auto=format&fit=crop",
-    tags: ["Adventure", "Scenic"],
-    rating: 4.8,
-  },
-  {
-    id: "dubai-uae",
-    destination: "Dubai",
-    code: "DXB",
-    country: "UAE",
-    duration: "5 Days / 4 Nights",
-    image:
-      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1600&auto=format&fit=crop",
-    tags: ["Family", "Shopping"],
-    rating: 4.7,
-  },
-  {
-    id: "kerala-india",
-    destination: "Kerala",
-    code: "COK",
-    country: "India",
-    duration: "5 Days / 4 Nights",
-    image:
-      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=1600&auto=format&fit=crop",
-    tags: ["Backwaters", "Nature"],
-    rating: 4.8,
-  },
-  {
-    id: "maldives",
-    destination: "Maldives",
-    code: "MLE",
-    country: "Maldives",
-    duration: "4 Days / 3 Nights",
-    image:
-      "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=1600&auto=format&fit=crop",
-    tags: ["Honeymoon", "Overwater Villas"],
-    rating: 5.0,
   },
 ];
 
@@ -395,4 +325,3 @@ export const TRUST_BADGES: TrustBadge[] = [
   { id: "iso", label: "ISO 9001:2015" },
   { id: "secure-payments", label: "Razorpay Secured Payments" },
 ];
-

@@ -37,6 +37,26 @@ export interface PackageItem {
   rating: number;
 }
 
+export interface FallbackPackage {
+  id: string;
+  title: string;
+  slug: string;
+  location: string;
+  duration: string;
+  price: string;
+  description: string;
+  thumbnailUrl: string;
+  featured: boolean;
+  destination: string;
+  code: string;
+  country: string;
+  image: string;
+  tags: string[];
+  rating: number;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
 export interface Testimonial {
   id: string;
   name: string;
@@ -60,4 +80,3 @@ export interface SocialLink {
   href: string;
   icon: "instagram" | "facebook" | "twitter" | "youtube";
 }
-

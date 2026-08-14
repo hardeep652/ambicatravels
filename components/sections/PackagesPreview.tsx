@@ -1,13 +1,11 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { ArrowUpRight, MapPin, Star } from "lucide-react";
-import { PACKAGES } from "@/lib/data";
+import { getPackageImage, getPackageTags } from "@/lib/package-presenters";
+import { getFeaturedPackages } from "@/lib/package-service";
 
-export function PackagesPreview() {
-  const featured = PACKAGES.slice(0, 4);
+export async function PackagesPreview() {
+  const featured = await getFeaturedPackages(4);
 
   return (
     <section className="bg-navy-50 py-20 sm:py-28">
@@ -31,22 +29,16 @@ export function PackagesPreview() {
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {featured.map((pkg, i) => (
-            <motion.div
-              key={pkg.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.5, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
-            >
+          {featured.map((pkg) => (
+            <div key={pkg.id}>
               <Link
-                href={`/packages/${pkg.id}`}
+                href={`/packages/${pkg.slug}`}
                 className="group block overflow-hidden rounded-2xl bg-white shadow-[0_2px_12px_rgba(15,23,42,0.06)] transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-[0_20px_44px_rgba(15,23,42,0.14)]"
               >
                 <div className="relative aspect-[4/3] w-full overflow-hidden bg-navy-100">
                   <Image
-                    src={pkg.image}
-                    alt={`${pkg.destination}, ${pkg.country}`}
+                    src={getPackageImage(pkg)}
+                    alt={pkg.title}
                     fill
                     sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
                     className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
@@ -59,14 +51,14 @@ export function PackagesPreview() {
                 <div className="p-5">
                   <div className="flex items-center gap-1.5 text-xs font-medium text-navy-500">
                     <MapPin className="h-3.5 w-3.5 text-emerald-500" />
-                    {pkg.country}
+                    {pkg.location}
                   </div>
                   <h3 className="mt-1.5 font-heading text-lg font-semibold text-navy-900">
-                    {pkg.destination}
+                    {pkg.title}
                   </h3>
 
                   <div className="mt-3 flex flex-wrap gap-1.5">
-                    {pkg.tags.map((tag) => (
+                    {getPackageTags(pkg).map((tag) => (
                       <span
                         key={tag}
                         className="rounded-full bg-navy-50 px-2.5 py-1 text-[11px] font-medium text-navy-500"
@@ -77,15 +69,15 @@ export function PackagesPreview() {
                   </div>
 
                   <div className="mt-4 flex items-center justify-between border-t border-navy-100 pt-4">
-                    <span className="text-xs font-medium text-navy-400">{pkg.code}</span>
+                    <span className="text-xs font-medium text-navy-400">{pkg.duration}</span>
                     <div className="flex items-center gap-1 text-sm font-semibold text-navy-900">
                       <Star className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
-                      {pkg.rating}
+                      {pkg.featured ? "Featured" : pkg.price}
                     </div>
                   </div>
                 </div>
               </Link>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
