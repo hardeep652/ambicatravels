@@ -58,7 +58,7 @@ export interface GalleryItem {
 export interface SocialLink {
   label: string;
   href: string;
-  icon: "instagram" | "facebook" | "twitter" | "youtube";
+  icon: "instagram" | "facebook" | "youtube";
 }
 
 export interface CarItem {

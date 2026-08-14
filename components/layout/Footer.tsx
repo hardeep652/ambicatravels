@@ -7,7 +7,6 @@ import {
   Mail,
   MapPin,
   Phone,
-  Twitter,
   Youtube,
 } from "lucide-react";
 import { CONTACT, NAV_LINKS, SOCIAL_LINKS } from "@/lib/data";
@@ -16,7 +15,6 @@ import type { SocialLink } from "@/types";
 const SOCIAL_ICONS: Record<SocialLink["icon"], typeof Instagram> = {
   instagram: Instagram,
   facebook: Facebook,
-  twitter: Twitter,
   youtube: Youtube,
 };
 
@@ -135,7 +133,23 @@ export function Footer() {
         </div>
 
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-white/45 sm:flex-row">
-          <p>&copy; {new Date().getFullYear()} Ambica Travels. All rights reserved.</p>
+           <p>&copy; {new Date().getFullYear()} Ambica Travels. All rights reserved.</p>
+            <span className="flex items-center gap-1 text-white/45">
+              Developed by
+              <a
+                href="https://www.revonis.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="https://res.cloudinary.com/dkzmths4e/image/upload/v1786703327/kwx94daaumk7k8bhxtaw.png"
+                  alt="Revonis"
+                  width={90}
+                  height={22}
+                  className="object-contain"
+                />
+              </a>
+            </span>
           <div className="flex gap-6">
             <Link href="#" className="hover:text-white/70">
               Privacy Policy

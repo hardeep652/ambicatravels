@@ -284,10 +284,9 @@ export const GALLERY: GalleryItem[] = [
 ];
 
 export const SOCIAL_LINKS: SocialLink[] = [
-  { label: "Instagram", href: "https://instagram.com", icon: "instagram" },
-  { label: "Facebook", href: "https://facebook.com", icon: "facebook" },
-  { label: "Twitter", href: "https://twitter.com", icon: "twitter" },
-  { label: "YouTube", href: "https://youtube.com", icon: "youtube" },
+  { label: "Instagram", href: "https://www.instagram.com/ambicatravels.official/", icon: "instagram" },
+  { label: "Facebook", href: "https://www.facebook.com/profile.php?id=100057531126292&mibextid=rS40aB7S9Ucbxw6v", icon: "facebook" },
+  { label: "YouTube", href: "https://www.youtube.com/channel/UCTu2g4gPwT8CTlode689uGQ", icon: "youtube" },
 ];
 
 export const CONTACT = {
