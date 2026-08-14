@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
-import { Box, CalendarClock, Package, Star } from "lucide-react";
+import { Package, Star, CalendarClock } from "lucide-react";
 
 export default async function AdminDashboardPage() {
   const [packageCount, featuredCount, latestPackages] = await Promise.all([
@@ -13,7 +13,7 @@ export default async function AdminDashboardPage() {
   ]);
 
   return (
-    <div className="min-h-screen px-5 py-8 sm:px-8 lg:px-12">
+    <div className="min-h-screen px-6 py-8 sm:px-8 lg:px-12 bg-[#F6F9FD]">
       {/* Header */}
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
@@ -36,7 +36,7 @@ export default async function AdminDashboardPage() {
       </div>
 
       {/* Stats */}
-      <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+      <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
         <MetricCard
           label="Total packages"
           value={packageCount}
@@ -46,7 +46,7 @@ export default async function AdminDashboardPage() {
         <MetricCard
           label="Featured packages"
           value={featuredCount}
-          icon={<Star className="h-5 w-5 text-indigo-600" aria-hidden="true" />}
+          icon={<Star className="h-5 w-5 text-purple-600" aria-hidden="true" />}
           hint="Featured"
         />
         <MetricCard
@@ -58,13 +58,16 @@ export default async function AdminDashboardPage() {
       </div>
 
       {/* Latest packages */}
-      <section className="mt-8 rounded-[18px] border border-slate-200 bg-white p-6 shadow-sm">
+      <section className="mt-8 rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
         <div className="flex items-start justify-between gap-4">
           <div>
             <h2 className="text-lg font-semibold text-[#0F172A]">Latest packages</h2>
             <p className="text-sm text-slate-500">Recent updates from the package catalog.</p>
           </div>
-          <Link href="/admin/packages" className="text-sm font-semibold text-sky-600 hover:text-sky-700">
+          <Link
+            href="/admin/packages"
+            className="text-sm font-semibold text-sky-600 hover:text-sky-700"
+          >
             View all →
           </Link>
         </div>
@@ -101,7 +104,7 @@ export default async function AdminDashboardPage() {
         ) : (
           <div className="mt-8 flex flex-col items-center justify-center gap-3 rounded-xl border border-dashed border-slate-300 bg-slate-50/70 px-6 py-14 text-center">
             <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white shadow-sm ring-1 ring-slate-200">
-              <Box className="h-6 w-6 text-slate-400" aria-hidden="true" />
+              <Package className="h-6 w-6 text-slate-400" aria-hidden="true" />
             </span>
             <h3 className="mt-1 text-base font-semibold text-[#0F172A]">No packages found yet.</h3>
             <p className="max-w-md text-sm text-slate-500">
@@ -132,13 +135,13 @@ function MetricCard({
   hint?: string;
 }) {
   return (
-    <div className="flex items-start gap-4 rounded-[18px] border border-slate-200 bg-white p-5 shadow-sm">
-      <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-50 ring-1 ring-slate-200">
+    <div className="flex items-start gap-4 rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+      <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-sky-50 ring-1 ring-sky-100">
         {icon}
       </span>
       <div>
         <p className="text-sm font-medium text-slate-500">{label}</p>
-        <p className="mt-1 text-3xl font-semibold tracking-tight text-[#0F172A]">{value}</p>
+        <p className="mt-1 text-2xl font-semibold tracking-tight text-[#0F172A]">{value}</p>
         {hint ? <p className="mt-1 text-xs text-slate-400">{hint}</p> : null}
       </div>
     </div>

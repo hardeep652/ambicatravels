@@ -11,8 +11,8 @@ export default async function AdminPackagesPage({
   const packages = await listPackages(search);
 
   return (
-    <div className="min-h-screen px-6 py-8 sm:px-8 lg:px-12">
-      <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+    <div className="px-6 py-8 sm:px-8 lg:px-12">
+      <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-sky-600">
             Package Management
