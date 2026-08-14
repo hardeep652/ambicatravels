@@ -42,6 +42,40 @@
   }
 }
 
+@layer utilities {
+  @keyframes login-fade-up {
+    0% {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-login-fade-up {
+    opacity: 0;
+    animation: login-fade-up 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .login-delay-1 {
+    animation-delay: 0.08s;
+  }
+  .login-delay-2 {
+    animation-delay: 0.18s;
+  }
+  .login-delay-3 {
+    animation-delay: 0.28s;
+  }
+  .login-delay-4 {
+    animation-delay: 0.38s;
+  }
+  .login-delay-5 {
+    animation-delay: 0.48s;
+  }
+}
+
 @layer components {
   .container-px {
     @apply px-5 sm:px-8 lg:px-16 xl:px-20;

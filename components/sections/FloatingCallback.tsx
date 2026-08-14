@@ -1,11 +1,13 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { Phone, X, Loader2, CheckCircle, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CONTACT } from "@/lib/data";
 
 export function FloatingCallback() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [mobile, setMobile] = useState("");
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
@@ -57,6 +59,8 @@ export function FloatingCallback() {
   };
 
   if (!mounted) return null;
+
+  if (pathname?.startsWith("/admin")) return null;
 
   return (
     <>
