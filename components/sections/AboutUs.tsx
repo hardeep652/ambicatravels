@@ -62,15 +62,13 @@ export function AboutUs() {
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-navy-900">
                   {/* Founder name */}
-                  Founder Name
+                  Vijay D Amin
                 </h3>
                 <p className="mt-1 text-sm font-medium text-navy-500">
                   Founder & CEO
                 </p>
                 <p className="mt-3 text-navy-600 leading-relaxed">
-                  {/* Founder bio placeholder */}
-                  A short bio about the founder — their background, what led them
-                  to start Ambica Travels, and their vision for the company.
+                  Vijay D Amin founded Ambica Travels in 2009, growing it from a Ahmedabad car-rental desk into a full-service travel partner trusted by 25,000+ travelers. His leadership emphasizes transparent pricing, 24×7 support, and quality certified journeys.
                 </p>
               </div>
             </div>
@@ -88,15 +86,13 @@ export function AboutUs() {
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-navy-900">
                   {/* Co-founder name */}
-                  Co-Founder Name
+                  Tushar D Amin
                 </h3>
                 <p className="mt-1 text-sm font-medium text-navy-500">
                   Co-Founder & Director
                 </p>
                 <p className="mt-3 text-navy-600 leading-relaxed">
-                  {/* Co-founder bio placeholder */}
-                  A short bio about the co-founder — their role in the business,
-                  areas of expertise, and what they bring to the team.
+                  Tushar D Amin, Co-Founder & Director, drives strategic growth and operational excellence. He leads business development, team leadership, and market expansion while optimizing operations and fostering innovation across the team.
                 </p>
               </div>
             </div>

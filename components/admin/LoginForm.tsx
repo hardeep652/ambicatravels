@@ -35,10 +35,9 @@ export function LoginForm() {
       callbackUrl: "/admin",
     });
 
-    setIsSubmitting(false);
-
     if (result?.error) {
       setError("Invalid email or password.");
+      setIsSubmitting(false);
       return;
     }
 
