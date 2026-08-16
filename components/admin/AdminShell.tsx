@@ -1,8 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LayoutDashboard, LogOut, Package2, Plane } from "lucide-react";
+import { LayoutDashboard, LogOut, Package2 } from "lucide-react";
 import { signOut } from "next-auth/react";
 import { cn } from "@/lib/utils";
 
@@ -33,15 +34,14 @@ export function AdminShell({
       <div className="grid min-h-screen lg:grid-cols-[260px_1fr]">
         <aside className="border-b border-white/10 bg-[#0B1B3A] text-white lg:border-b-0 lg:border-r">
           <div className="flex h-full flex-col px-6 py-7">
-            <Link href="/admin" className="flex items-center gap-3 text-white">
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 ring-1 ring-white/15">
-                <Plane className="h-5 w-5 text-sky-400" aria-hidden="true" />
-              </span>
-              <div className="leading-tight">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-sky-200/90">Ambica</p>
-                <p className="text-base font-semibold uppercase tracking-[0.14em]">Travels</p>
-              </div>
-            </Link>
+<Link href="/admin" className="flex items-center gap-3 text-white">
+              <Image
+                src="/AT.png"
+                alt="Ambica Travels logo"
+                width={100}
+                height={50}
+              />
+</Link>
 
             <nav className="mt-8 space-y-2">
               {navItems.map((item) => {

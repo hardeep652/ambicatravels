@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Plane, ShieldCheck } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
 import { LoginForm } from "@/components/admin/LoginForm";
 
 export const metadata: Metadata = {
@@ -47,16 +47,13 @@ export default function AdminLoginPage() {
 
             {/* Branding */}
             <div className="animate-login-fade-up login-delay-1 relative flex items-center gap-3">
-              <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10 ring-1 ring-white/25 backdrop-blur-sm">
-                <Plane className="h-5 w-5 text-sky-400" aria-hidden="true" />
-              </span>
               <div className="leading-tight">
-                <p className="text-sm font-bold uppercase tracking-[0.22em]">
-                  Ambica Travels
-                </p>
-                <p className="text-xs font-medium uppercase tracking-[0.28em] text-sky-200/80">
-                  Admin Panel
-                </p>
+                <Image
+                  src="/AT.png"
+                  alt="Ambica Travels logo"
+                  width={110}
+                  height={34}
+                />
               </div>
             </div>
 

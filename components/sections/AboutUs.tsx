@@ -54,7 +54,7 @@ export function AboutUs() {
               <div className="relative w-full h-[320px] bg-navy-100 flex items-center justify-center">
                 {/* Replace src with the founder's photo */}
                 <img
-                  src="https://placehold.co/600x600/e2e8f0/64748b?text=Founder+Photo"
+                  src="https://res.cloudinary.com/ozr2ckrb/image/upload/v1786861296/ChatGPT_Image_Aug_16_2026_11_51_20_AM.png"
                   alt="Founder of Ambica Travels"
                   className="w-full h-full object-cover"
                 />

@@ -47,19 +47,6 @@ export function LoginForm() {
 
   return (
     <div className="mx-auto w-full max-w-md">
-      {/* Language selector */}
-      <div className="animate-login-fade-up login-delay-1 flex justify-end">
-        <button
-          type="button"
-          className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-slate-500 transition hover:border-slate-300 hover:text-slate-700"
-          aria-label="Change language, currently English"
-        >
-          <Globe className="h-3.5 w-3.5" aria-hidden="true" />
-          English
-          <ChevronDown className="h-3.5 w-3.5" aria-hidden="true" />
-        </button>
-      </div>
-
       {/* Mobile branding (left panel is hidden on small screens) */}
       <div className="animate-login-fade-up login-delay-1 mt-6 flex items-center justify-center gap-2 lg:hidden">
         <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-sky-600/10">
@@ -232,6 +219,9 @@ export function LoginForm() {
         </p>
         <p className="text-xs text-slate-400">
           © 2026 Ambica Travels. All rights reserved.
+        </p>
+        <p className="text-xs text-slate-500">
+          Security provided by Revonis
         </p>
       </div>
     </div>
