@@ -1,7 +1,7 @@
 import { Prisma } from "@prisma/client";
 import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
-import { createPackage, listPackages } from "@/lib/package-service";
+import { createPackage, listAdminPackages } from "@/lib/package-service";
 import { packageSchema } from "@/schemas/package.schema";
 
 function unauthorized() {
@@ -17,7 +17,7 @@ export async function GET(request: Request) {
 
   const { searchParams } = new URL(request.url);
   const search = searchParams.get("search") ?? "";
-  const packages = await listPackages(search);
+  const packages = await listAdminPackages(search);
 
   return NextResponse.json({ data: packages });
 }

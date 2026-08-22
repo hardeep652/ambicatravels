@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { RotatingPackageImage } from "@/components/RotatingPackageImage";
 import { getPackageImage, getPackageTags } from "@/lib/package-presenters";
 import { listPackages } from "@/lib/package-service";
 
@@ -18,17 +18,24 @@ export async function FeaturedPackages() {
         />
 
         <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {packages.map((pkg) => (
+          {packages.map((pkg) => {
+            const images =
+              "images" in pkg &&
+              Array.isArray(pkg.images) &&
+              pkg.images.length > 0
+                ? pkg.images
+                : [getPackageImage(pkg)];
+
+            return (
             <div key={pkg.id} className="h-full">
               <Link
                 href={`/packages/${pkg.slug}`}
                 className="group flex h-full flex-col rounded-[1.75rem] bg-white shadow-[0_1px_2px_rgba(15,23,42,0.06)] ring-1 ring-navy-900/5 transition-all duration-500 hover:-translate-y-2 hover:shadow-premium"
               >
                 <div className="relative h-52 overflow-hidden rounded-t-[1.75rem]">
-                  <Image
-                    src={getPackageImage(pkg)}
+                  <RotatingPackageImage
+                    images={images}
                     alt={pkg.title}
-                    fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
@@ -88,7 +95,8 @@ export async function FeaturedPackages() {
                 </div>
               </Link>
             </div>
-          ))}
+          );
+          })}
         </div>
       </div>
     </section>

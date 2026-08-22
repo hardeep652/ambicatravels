@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { PackageForm } from "@/components/admin/PackageForm";
-import { getPackageById } from "@/lib/package-service";
+import { getAdminPackageById } from "@/lib/package-service";
 
 export default async function EditPackagePage({
   params,
@@ -8,7 +8,7 @@ export default async function EditPackagePage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const pkg = await getPackageById(id);
+  const pkg = await getAdminPackageById(id);
 
   if (!pkg) {
     notFound();

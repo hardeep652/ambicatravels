@@ -1,7 +1,7 @@
 import { Prisma } from "@prisma/client";
 import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
-import { deletePackage, getPackageById, updatePackage } from "@/lib/package-service";
+import { deletePackage, getAdminPackageById, updatePackage } from "@/lib/package-service";
 import { packageSchema } from "@/schemas/package.schema";
 
 function unauthorized() {
@@ -19,7 +19,7 @@ export async function GET(
   }
 
   const { id } = await params;
-  const pkg = await getPackageById(id);
+  const pkg = await getAdminPackageById(id);
 
   if (!pkg) {
     return NextResponse.json({ error: "Package not found." }, { status: 404 });

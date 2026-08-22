@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowUpRight, MapPin, Star } from "lucide-react";
 import { getPackageImage, getPackageTags } from "@/lib/package-presenters";
 import { getFeaturedPackages } from "@/lib/package-service";
+import PackageImageCarousel from "@/components/sections/PackageImageCarousel";
 
 export async function PackagesPreview() {
   const featured = await getFeaturedPackages(4);
@@ -36,13 +37,15 @@ export async function PackagesPreview() {
                 className="group block overflow-hidden rounded-2xl bg-white shadow-[0_2px_12px_rgba(15,23,42,0.06)] transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-[0_20px_44px_rgba(15,23,42,0.14)]"
               >
                 <div className="relative aspect-[4/3] w-full overflow-hidden bg-navy-100">
-                  <Image
-                    src={getPackageImage(pkg)}
-                    alt={pkg.title}
-                    fill
-                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
-                    className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-                  />
+                  <PackageImageCarousel
+  images={
+    "images" in pkg && Array.isArray(pkg.images)
+      ? pkg.images
+      : []
+  }
+  fallback={getPackageImage(pkg)}
+  alt={pkg.title}
+/>
                   <span className="absolute left-3 top-3 rounded-full bg-white/95 px-3 py-1 text-xs font-semibold text-navy-900 backdrop-blur">
                     {pkg.duration}
                   </span>

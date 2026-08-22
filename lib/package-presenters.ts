@@ -8,12 +8,15 @@ export function getPackageImage(pkg: RenderablePackage) {
     return pkg.image;
   }
 
+  if ("images" in pkg && Array.isArray(pkg.images) && pkg.images.length > 0) {
+    return pkg.images[0];
+  }
+
   return (
     pkg.thumbnailUrl ||
     "https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=1600&auto=format&fit=crop"
   );
 }
-
 export function getPackageTags(pkg: RenderablePackage) {
   if ("tags" in pkg && pkg.tags.length > 0) {
     return pkg.tags;
