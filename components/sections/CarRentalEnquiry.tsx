@@ -194,7 +194,10 @@ export function CarRentalEnquiry() {
                       <motion.button
                         type="button"
                         key={car.id}
-                        onClick={() => selectCar(car.id)}
+                        onClick={() => {
+                          selectCar(car.id);
+                          window.open(car.image, "_blank");
+                        }}
                         whileHover={{ y: -4 }}
                         whileTap={{ scale: 0.98 }}
                         className={cn(
