@@ -18,10 +18,11 @@ const SERVICE_ICON_MAP: Record<string, LucideIcon> = {
 // luggage/an airport) since the bottom third gets covered by a gradient +
 // the card content — busy detail there will fight the text.
 // If a path is missing, <img> just fails silently to the navy fallback below.
+// Using Unsplash source for high-quality travel/transport images.
 const SERVICE_IMAGE_MAP: Record<string, string> = {
-  car: "/images/services/car-rental.jpg",
-  bus: "/images/services/bus-rental.jpg",
-  package: "/images/services/holiday-packages.jpg",
+  car: "https://images.unsplash.com/photo-1566073178545-4d257d1eee5f?q=80&w=800&auto=format&fit=crop",
+  bus: "https://images.unsplash.com/photo-1581090660312-1c436a4b85e1?q=80&w=800&auto=format&fit=crop",
+  package: "https://images.unsplash.com/photo-1594753170506-6b11c38cb189?q=80&w=800&auto=format&fit=crop",
 };
 
 export function ServicesPreview() {
