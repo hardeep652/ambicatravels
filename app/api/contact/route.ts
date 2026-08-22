@@ -118,8 +118,8 @@ export async function POST(req: Request) {
         <p style="margin: 0 0 10px 0; font-size: 12px; color: #64748B; text-transform: uppercase; letter-spacing: 1px;">Ambica Travels</p>
         <p style="margin: 5px 0 0 0; font-size: 14px; color: #cbd5e1;">
           Website: ambicatravels.com<br>
-          Email: hello@ambicatravels.com<br>
-          Phone: +91 98765 43210
+          Email: info@ambikatravels.com<br>
+          Phone: +91-98253 15985
         </p>
         <p style="margin: 15px 0 0 0; font-size: 12px; color: #64748B;">
           © 2026 Ambica Travels. All rights reserved.

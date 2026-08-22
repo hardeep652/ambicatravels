@@ -300,7 +300,7 @@ export function BusEnquiry() {
                           ...register("mobileNumber"),
                           type: "tel",
                           autoComplete: "tel",
-                          placeholder: "+91 98765 43210",
+                          placeholder: "+91-98253 15985",
                         }}
                       />
                       <Field
