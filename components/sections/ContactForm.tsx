@@ -119,7 +119,7 @@ export function ContactForm() {
                 <div className="col-span-2">
                   <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-navy-400">Direct</p>
                   <a href="mailto:hello@example.com" className="mt-1 flex items-center gap-1.5 text-sm text-navy-100 transition hover:text-sky-400">
-                    <Mail className="h-3.5 w-3.5" /> hello@example.com
+                    <Mail className="h-3.5 w-3.5" /> info@ambikatravels.com
                   </a>
                   <a href="tel:+91-9825315985" className="mt-1.5 flex items-center gap-1.5 text-sm text-navy-100 transition hover:text-sky-400">
                     <Phone className="h-3.5 w-3.5" /> +91-98253 15985
