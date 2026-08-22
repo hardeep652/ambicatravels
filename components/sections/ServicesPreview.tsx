@@ -6,23 +6,10 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, Bus, Car, Package, type LucideIcon } from "lucide-react";
 import { SERVICES } from "@/lib/data";
 
-// Matches the string values used in your existing SERVICES icon field.
 const SERVICE_ICON_MAP: Record<string, LucideIcon> = {
   car: Car,
   bus: Bus,
   package: Package,
-};
-
-// Drop a real photo at each of these paths in /public. Suggested crop is a
-// wide, low-detail shot (road at dusk, a coach on a highway, packed
-// luggage/an airport) since the bottom third gets covered by a gradient +
-// the card content — busy detail there will fight the text.
-// If a path is missing, <img> just fails silently to the navy fallback below.
-// Using Unsplash source for high-quality travel/transport images.
-const SERVICE_IMAGE_MAP: Record<string, string> = {
-  car: "https://images.unsplash.com/photo-1566073178545-4d257d1eee5f?q=80&w=800&auto=format&fit=crop",
-  bus: "https://images.unsplash.com/photo-1581090660312-1c436a4b85e1?q=80&w=800&auto=format&fit=crop",
-  package: "https://images.unsplash.com/photo-1594753170506-6b11c38cb189?q=80&w=800&auto=format&fit=crop",
 };
 
 export function ServicesPreview() {
@@ -51,7 +38,6 @@ export function ServicesPreview() {
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-3">
           {SERVICES.map((service, i) => {
             const Icon = SERVICE_ICON_MAP[service.icon] ?? Package;
-            const image = SERVICE_IMAGE_MAP[service.icon];
             return (
               <motion.div
                 key={service.id}
@@ -66,15 +52,13 @@ export function ServicesPreview() {
                 >
                   {/* Photo header */}
                   <div className="relative h-36 w-full overflow-hidden bg-navy-900">
-                    {image && (
-                      <Image
-                        src={image}
-                        alt=""
-                        fill
-                        sizes="(min-width: 640px) 33vw, 100vw"
-                        className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-                      />
-                    )}
+                    <Image
+                      src={service.image}
+                      alt=""
+                      fill
+                      sizes="(min-width: 640px) 33vw, 100vw"
+                      className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                    />
                     {/* Fade the photo into the white card body */}
                     <div className="absolute inset-0 bg-gradient-to-t from-white via-white/10 to-navy-900/40" />
                     <div className="absolute inset-0 bg-navy-900/20" />
