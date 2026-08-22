@@ -387,38 +387,6 @@ export function CarRentalEnquiry() {
                       )}
                     </div>
 
-                    <div>
-                      <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-navy-500">
-                        Rental type *
-                      </label>
-                      <div className="grid grid-cols-2 gap-3">
-                        {(["Self Drive", "With Driver"] as const).map((type) => (
-                          <button
-                            type="button"
-                            key={type}
-                            onClick={() =>
-                              setValue("rentalType", type, {
-                                shouldValidate: true,
-                              })
-                            }
-                            className={cn(
-                              "rounded-lg border py-2.5 text-sm font-medium transition-all",
-                              rentalType === type
-                                ? "border-sky-500 bg-sky-50 text-sky-700 ring-1 ring-sky-500/30"
-                                : "border-navy-200 text-navy-600 hover:border-navy-300"
-                            )}
-                          >
-                            {type}
-                          </button>
-                        ))}
-                      </div>
-                      {errors.rentalType && (
-                        <p className="mt-1 text-sm text-red-500">
-                          {errors.rentalType.message}
-                        </p>
-                      )}
-                    </div>
-
                     <Field
                       id="passengers"
                       label="Number of passengers"

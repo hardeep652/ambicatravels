@@ -442,41 +442,7 @@ export function BusEnquiry() {
                       )}
                     </div>
 
-                    <div>
-                      <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-navy-500">
-                        Trip type *
-                      </label>
-                      <div className="grid grid-cols-3 gap-3">
-                        {(["One Way", "Round Trip", "Multi Day"] as const).map(
-                          (option) => (
-                            <button
-                              type="button"
-                              key={option}
-                              onClick={() =>
-                                setValue("tripType", option, {
-                                  shouldValidate: true,
-                                })
-                              }
-                              className={cn(
-                                "rounded-lg border px-1 py-2.5 text-center text-xs font-medium transition-all sm:text-sm",
-                                tripType === option
-                                  ? "border-sky-500 bg-sky-50 text-sky-700 ring-1 ring-sky-500/30"
-                                  : "border-navy-200 text-navy-600 hover:border-navy-300"
-                              )}
-                            >
-                              {option}
-                            </button>
-                          )
-                        )}
-                      </div>
-                      {errors.tripType && (
-                        <p className="mt-1 text-sm text-red-500">
-                          {errors.tripType.message}
-                        </p>
-                      )}
-                    </div>
-
-                    <div>
+<div>
                       <label
                         htmlFor="additionalMessage"
                         className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-navy-500"
