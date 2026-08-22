@@ -208,10 +208,7 @@ export function BusEnquiry() {
                       <motion.button
                         type="button"
                         key={bus.id}
-                        onClick={() => {
-                          selectBus(bus.id);
-                          window.open(bus.image, "_blank");
-                        }}
+                        onClick={() => selectBus(bus.id)}
                         whileHover={{ y: -4 }}
                         whileTap={{ scale: 0.98 }}
                         className={cn(
