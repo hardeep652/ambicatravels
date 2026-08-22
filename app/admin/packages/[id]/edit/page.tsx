@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { PackageForm } from "@/components/admin/PackageForm";
-import { getAdminPackageById } from "@/lib/package-service";
+import { getPackageById } from "@/lib/package-service";
 
 export default async function EditPackagePage({
   params,
@@ -8,7 +8,7 @@ export default async function EditPackagePage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const pkg = await getAdminPackageById(id);
+  const pkg = await getPackageById(id);
 
   if (!pkg) {
     notFound();
@@ -39,7 +39,7 @@ export default async function EditPackagePage({
             duration: pkg.duration,
             price: pkg.price,
             description: pkg.description,
-            thumbnailUrl: pkg.thumbnailUrl ?? "",
+            images: "images" in pkg && Array.isArray(pkg.images) ? pkg.images : pkg.thumbnailUrl ? [pkg.thumbnailUrl] : [],
             featured: pkg.featured,
           }}
         />
