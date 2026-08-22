@@ -1,5 +1,9 @@
+import NextAuth from "next-auth";
 import { NextResponse } from "next/server";
-import { auth } from "@/lib/auth";
+
+import { authConfig } from "@/lib/auth.config";
+
+const { auth } = NextAuth(authConfig);
 
 export default auth((req) => {
   const isLoggedIn = !!req.auth;
@@ -9,7 +13,11 @@ export default auth((req) => {
     return NextResponse.redirect(new URL("/admin", req.nextUrl));
   }
 
-  if (pathname.startsWith("/admin") && pathname !== "/admin/login" && !isLoggedIn) {
+  if (
+    pathname.startsWith("/admin") &&
+    pathname !== "/admin/login" &&
+    !isLoggedIn
+  ) {
     return NextResponse.redirect(new URL("/admin/login", req.nextUrl));
   }
 
