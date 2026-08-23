@@ -6,9 +6,9 @@ import { ArrowUpRight, ChevronRight, MapPin, Star } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { CTABanner } from "@/components/sections/CTABanner";
+import { PackagePlanForm } from "@/components/sections/PackagePlanForm";
 import { getPackageImage, getPackageTags } from "@/lib/package-presenters";
 import { getPackageBySlug, listPackages } from "@/lib/package-service";
-import { Button } from "@/components/ui/button";
 
 export async function generateMetadata({
   params,
@@ -135,9 +135,13 @@ export default async function PackageDetailPage({
                   <p className="mt-2 font-semibold text-navy-900">{pkg.price}</p>
                 </div>
               </div>
-              <Button asChild className="mt-6 w-full">
-                <Link href={`/contact?package=${encodeURIComponent(pkg.title)}`}>Plan this trip</Link>
-              </Button>
+              <PackagePlanForm
+                packageInfo={{
+                  location: pkg.location,
+                  duration: pkg.duration,
+                  price: pkg.price,
+                }}
+              />
             </aside>
           </div>
         </section>

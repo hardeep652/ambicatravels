@@ -220,13 +220,52 @@ export const SOCIAL_LINKS: SocialLink[] = [
 ];
 
 export const CONTACT = {
-  phone: "+91-98253 15985",
-  whatsapp: "+91-98253 15985",
+  phone: "+91-9558176527",
+  whatsapp: "+91 9558176527",
   email: "info@ambikatravels.com",
   address: "204, Shanti Arcade, C.G. Road, Navrangpura, Ahmedabad, Gujarat 403 4th floor, Dream Square, complex, under bridge, opp. Ramdevpir mandir, Akhbar Nagar, Nirnay Nagar, Ahmedabad, Gujarat 380013",
   mapsEmbedSrc:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.918!2d72.5566!3d23.0339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDAyJzAyLjAiTiA3MsKwMzMnMjMuOCJF!5e0!3m2!1sen!2sin!4v1700000000000",
 };
+
+// ---------------------------------------------------------------------------
+// WhatsApp "Plan This Trip" helper
+// ---------------------------------------------------------------------------
+
+function encodeMessage(text: string): string {
+  return encodeURIComponent(text).replace(/%20/g, "+");
+}
+
+export function generateWhatsAppMessage(pkg: { title: string; location?: string; duration: string; price: string; description?: string }): string {
+  const {
+    title,
+    location,
+    duration,
+    price,
+    description,
+  } = pkg;
+
+  const destination = location || "Not specified";
+  const travelDates = "Not specified"; // not stored in package data
+  const travelers = "Not specified"; // not stored in package data
+
+  const itinerary = description || "Itinerary details not available";
+
+  const inclusions = "Not specified"; // not explicitly stored
+  const exclusions = "Not specified"; // not explicitly stored
+
+  const message = `*Trip/Package Name*: ${title}
+*Destination*: ${destination}
+*Duration*: ${duration}
+*Travel Dates*: ${travelDates}
+*Number of Travelers*: ${travelers}
+*Package Price*: ${price}
+*Itinerary / Trip Highlights*: ${itinerary}
+*Inclusions*: ${inclusions}
+*Exclusions*: ${exclusions}`;
+
+  return encodeMessage(message);
+}
 
 // ---------------------------------------------------------------------------
 // Everything below is NEW — append it to the end of your existing data.ts.
