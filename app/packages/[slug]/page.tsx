@@ -107,21 +107,21 @@ export default async function PackageDetailPage({
         </section>
 
         <section className="section-py bg-white">
-          <div className="container-px mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_320px] lg:items-start">
+          <div className="container-px mx-auto grid max-w-[90rem] gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(430px,520px)] lg:items-start xl:grid-cols-[minmax(0,0.85fr)_minmax(480px,560px)] xl:gap-14">
             <div className="min-w-0">
               <div>
                 <h2 className="font-heading text-2xl font-semibold text-navy-900">Overview</h2>
-                <p className="mt-4 max-w-3xl text-base leading-8 text-navy-500">
+                <p className="mt-4 max-w-none text-base leading-8 text-navy-500">
                   {pkg.description}
                 </p>
               </div>
             </div>
 
-            <aside className="rounded-[2rem] border border-navy-100 bg-cloud p-6 shadow-[0_15px_50px_rgba(15,23,42,0.07)]">
+            <aside className="rounded-[2rem] border border-navy-100 bg-cloud p-5 shadow-[0_15px_50px_rgba(15,23,42,0.07)] sm:p-6 lg:sticky lg:top-28">
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-sky-600">
                 Package Snapshot
               </p>
-              <div className="mt-5 space-y-4 text-sm text-navy-600">
+              <div className="mt-5 grid gap-3 text-sm text-navy-600 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
                 <div className="rounded-2xl bg-white px-4 py-4">
                   <p className="text-xs uppercase tracking-[0.18em] text-navy-400">Location</p>
                   <p className="mt-2 font-semibold text-navy-900">{pkg.location}</p>
