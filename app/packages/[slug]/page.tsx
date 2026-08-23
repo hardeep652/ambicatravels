@@ -9,6 +9,8 @@ import { CTABanner } from "@/components/sections/CTABanner";
 import { PackagePlanForm } from "@/components/sections/PackagePlanForm";
 import { getPackageImage, getPackageTags } from "@/lib/package-presenters";
 import { getPackageBySlug, listPackages } from "@/lib/package-service";
+import { Button } from "@/components/ui/button";
+import { generateWhatsAppMessage } from "@/lib/data";
 
 export async function generateMetadata({
   params,
