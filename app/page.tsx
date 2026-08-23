@@ -5,7 +5,6 @@ import { Stats } from "@/components/sections/Stats";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { ServicesPreview } from "@/components/sections/ServicesPreview";
 import { PackagesPreview } from "@/components/sections/PackagesPreview";
-import { TrustBadges } from "@/components/sections/TrustBadges";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { GalleryPreview } from "@/components/sections/GalleryPreview";
 import { Testimonials } from "@/components/sections/Testimonials";
@@ -28,7 +27,7 @@ export default function Home() {
         <WhyChooseUs />
         <ServicesPreview />
         <PackagesPreview />
-        <TrustBadges />
+        
         <HowItWorks />
         <GalleryPreview />
         <Testimonials />
