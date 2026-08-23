@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 export function Stats() {
   return (
-    <section className="relative -mt-20 z-10">
+    <section className="relative mt-10 z-10">
       <div className="container-px mx-auto max-w-7xl">
         <StaggerGroup className="grid grid-cols-2 gap-px overflow-hidden rounded-3xl bg-navy-100/60 shadow-premium md:grid-cols-4">
           {STATS.map((stat) => (
