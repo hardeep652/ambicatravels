@@ -166,50 +166,85 @@ export const TESTIMONIALS: Testimonial[] = [
 
 export const GALLERY: GalleryItem[] = [
   {
-    id: "gallery-1",
-    title: "Cliffside sunsets",
-    location: "Santorini, Greece",
+    id: "gallery-7",
+    title: "Golden hour at the beach",
+    location: "Goa, India",
     image:
-      "https://images.unsplash.com/photo-1469796466635-455ede028aca?q=80&w=1400&auto=format&fit=crop",
+      "https://res.cloudinary.com/ozr2ckrb/image/upload/v1787678230/WhatsApp_Image_2026-08-25_at_9.39.15_PM_2.jpg",
     span: "tall",
+    description: "A couple watching the sunset on Goa's shores — the warm hues and relaxed vibe reflect the perfect end to a seamless Ambica-planned beach getaway."
   },
   {
-    id: "gallery-2",
-    title: "Overwater villas",
-    location: "Maldives",
-    image:
-      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?q=80&w=1400&auto=format&fit=crop",
-    span: "wide",
-  },
-  {
-    id: "gallery-3",
-    title: "Rice terraces",
-    location: "Ubud, Bali",
-    image:
-      "https://images.unsplash.com/photo-1531592937781-344ad608fabf?q=80&w=1400&auto=format&fit=crop",
-  },
-  {
-    id: "gallery-4",
-    title: "Alpine trails",
-    location: "Interlaken, Switzerland",
-    image:
-      "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=80&w=1400&auto=format&fit=crop",
-  },
-  {
-    id: "gallery-5",
-    title: "Desert skyline",
+    id: "gallery-8",
+    title: "Family at a landmark",
     location: "Dubai, UAE",
     image:
-      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1400&auto=format&fit=crop",
+      "https://res.cloudinary.com/ozr2ckrb/image/upload/v1787678230/WhatsApp_Image_2026-08-25_at_9.39.15_PM_1.jpg",
     span: "wide",
+    description: "A multigenerational family posing at the Burj Khalifa, celebrating a hassle-free Dubai trip organized entirely by Ambica Travels."
   },
   {
-    id: "gallery-6",
-    title: "Backwater houseboats",
-    location: "Alleppey, Kerala",
+    id: "gallery-9",
+    title: "Trip group smiling",
+    location: "Bangkok, Thailand",
     image:
-      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=1400&auto=format&fit=crop",
+      "https://res.cloudinary.com/ozr2ckrb/image/upload/v1787678230/WhatsApp_Image_2026-08-25_at_9.39.16_PM.jpg",
+    span: "normal",
+    description: "Friends enjoying a street-food tour in Bangkok, curated by Ambica Travels with seamless transfers and insider recommendations."
+  },
+  {
+    id: "gallery-10",
+    title: "City skyline at dusk",
+    location: "Dubai, UAE",
+    image:
+      "https://res.cloudinary.com/ozr2ckrb/image/upload/v1787678229/WhatsApp_Image_2026-08-25_at_9.39.17_PM_1.jpg",
+    span: "wide",
+    description: "The Dubai skyline glowing at twilight — a Ambica-curated evening desert safari that guests still talk about."
+  },
+  {
+    id: "gallery-11",
+    title: "Mountain vistas",
+    location: "Manali, India",
+    image:
+      "https://res.cloudinary.com/ozr2ckrb/image/upload/v1787678229/WhatsApp_Image_2026-08-25_at_9.39.17_PM.jpg",
     span: "tall",
+    description: "Snow-capped peaks and lush valleys — a trekking itinerary planned by Ambica Travels, where every altitude change was accounted for."
+  },
+  {
+    id: "gallery-12",
+    title: "Road trip joy",
+    location: "Rajasthan, India",
+    image:
+      "https://res.cloudinary.com/ozr2ckrb/image/upload/v1787678229/WhatsApp_Image_2026-08-25_at_9.39.18_PM.jpg",
+    span: "normal",
+    description: "A road trip through Rajasthan's golden desert routes, with Ambica Travels handling the vehicle and route planning so the travelers could just enjoy the ride."
+  },
+  {
+    id: "gallery-13",
+    title: "Heritage exploration",
+    location: "Jaipur, India",
+    image:
+      "https://res.cloudinary.com/ozr2ckrb/image/upload/v1787678229/WhatsApp_Image_2026-08-25_at_9.39.14_PM.jpg",
+    span: "tall",
+    description: "Exploring Jaipur's magnificent forts and palaces with Ambica Travel's expert guides, bringing history to life for every visitor."
+  },
+  {
+    id: "gallery-14",
+    title: "Sunset reflections",
+    location: "Kerala, India",
+    image:
+      "https://res.cloudinary.com/ozr2ckrb/image/upload/v1787678229/WhatsApp_Image_2026-08-25_at_9.39.19_PM.jpg",
+    span: "wide",
+    description: "Backwaters at sunset in Kerala — a tranquil end to a Kerala houseboat package flawlessly coordinated by Ambica Travels."
+  },
+  {
+    id: "gallery-15",
+    title: "Travel memories",
+    location: "Gujarat, India",
+    image:
+      "https://res.cloudinary.com/ozr2ckrb/image/upload/v1787678228/WhatsApp_Image_2026-08-25_at_9.39.14_PM_1.jpg",
+    span: "normal",
+    description: "A candid moment from a Gujarat cultural tour with Ambica Travels, capturing the joy of discovering new places with loved ones."
   },
 ];
 

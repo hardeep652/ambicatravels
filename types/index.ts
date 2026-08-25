@@ -73,6 +73,7 @@ export interface GalleryItem {
   location: string;
   image: string;
   span?: "wide" | "tall" | "normal";
+  description: string;
 }
 
 export interface SocialLink {
