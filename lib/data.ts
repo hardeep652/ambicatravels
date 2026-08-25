@@ -220,8 +220,8 @@ export const SOCIAL_LINKS: SocialLink[] = [
 ];
 
 export const CONTACT = {
-  phone: "+91-98253 15985",
-  whatsapp: "+91 9558176527",
+  phone: "+91-7203035985",
+  whatsapp: "+91 7203035985",
   email: "info@ambikatravels.com",
   address: "204, Shanti Arcade, C.G. Road, Navrangpura, Ahmedabad, Gujarat 403 4th floor, Dream Square, complex, under bridge, opp. Ramdevpir mandir, Akhbar Nagar, Nirnay Nagar, Ahmedabad, Gujarat 380013",
   mapsEmbedSrc:

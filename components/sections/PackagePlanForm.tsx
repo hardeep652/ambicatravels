@@ -29,7 +29,7 @@ export function PackagePlanForm({ packageInfo }: PackagePlanFormProps) {
 *Duration*: ${packageInfo.duration}
 *Price*: ${packageInfo.price}`;
 
-    const whatsappUrl = `https://wa.me/919558176527?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/917203035985?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank", "noopener,noreferrer");
   }
 

@@ -121,8 +121,8 @@ export function ContactForm() {
                   <a href="mailto:hello@example.com" className="mt-1 flex items-center gap-1.5 text-sm text-navy-100 transition hover:text-sky-400">
                     <Mail className="h-3.5 w-3.5" /> info@ambikatravels.com
                   </a>
-                  <a href="tel:+91-9825315985" className="mt-1.5 flex items-center gap-1.5 text-sm text-navy-100 transition hover:text-sky-400">
-                    <Phone className="h-3.5 w-3.5" /> +91-98253 15985
+<a href="tel:+91-7203035985" className="mt-1.5 flex items-center gap-1.5 text-sm text-navy-100 transition hover:text-sky-400">
+                    <Mail className="h-3.5 w-3.5" /> +91-7203035985
                   </a>
                 </div>
               </div>
@@ -174,7 +174,7 @@ export function ContactForm() {
                     ...register("phone"),
                     type: "tel",
                     autoComplete: "tel",
-                    placeholder: "+91-98253 15985",
+                    placeholder: "+91-7203035985",
                   }}
                 />
                 <Field

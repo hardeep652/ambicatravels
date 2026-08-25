@@ -122,7 +122,7 @@ function StampMark({
           fill={color}
           opacity={0.75}
         >
-          ARRIVED · EST. 2009
+          ARRIVED · EST. 1999
         </text>
       </svg>
     </motion.div>
@@ -273,7 +273,7 @@ export function Hero() {
           className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/90 backdrop-blur-sm"
         >
           <PlaneTakeoff className="h-3.5 w-3.5 text-emerald-400" />
-          Ahmedabad&apos;s Trusted Travel Partner Since 2009
+          Ahmedabad&apos;s Trusted Travel Partner Since 1999
         </motion.span>
 
         <motion.h1

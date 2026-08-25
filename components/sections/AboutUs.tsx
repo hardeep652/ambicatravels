@@ -15,7 +15,7 @@ export function AboutUs() {
         <div className="mt-14 grid gap-10 md:grid-cols-2 items-center">
           <div className="prose prose-navy max-w-none">
             <p className="text-lg leading-relaxed text-navy-600">
-              Founded in 2009, Ambica Travels started as a modest car‑rental desk in Ahmedabad.
+              Founded in 1999, Ambica Travels started as a modest car‑rental desk in Ahmedabad.
               Over the years we have grown into a full‑service travel partner offering self‑drive cars,
               chauffeur‑driven fleets, bus rentals for groups, and curated domestic & international holiday packages.
             </p>

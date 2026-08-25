@@ -290,7 +290,7 @@ export function CarRentalEnquiry() {
                           ...register("mobileNumber"),
                           type: "tel",
                           autoComplete: "tel",
-                          placeholder: "+91-98253 15985",
+                          placeholder: "+91-7203035985",
                         }}
                       />
                       <Field

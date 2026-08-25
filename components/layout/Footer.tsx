@@ -36,7 +36,7 @@ export function Footer() {
             </div>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/60">
               Car rentals, coach hire and fully-escorted holidays, planned by
-              a Gujarat-based team that&apos;s been doing this since 2009.
+              a Gujarat-based team that&apos;s been doing this since 1999.
             </p>
             <ul className="mt-6 flex items-center gap-3">
               {SOCIAL_LINKS.map((social) => {
