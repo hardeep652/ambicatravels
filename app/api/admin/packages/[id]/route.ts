@@ -1,5 +1,6 @@
 import { Prisma } from "@prisma/client";
 import { NextResponse } from "next/server";
+import { revalidatePath } from "next/cache";
 import { auth } from "@/lib/auth";
 import { deletePackage, getAdminPackageById, updatePackage } from "@/lib/package-service";
 import { packageSchema } from "@/schemas/package.schema";
@@ -52,6 +53,11 @@ export async function PUT(
 
   try {
     const pkg = await updatePackage(id, parsed.data);
+
+    revalidatePath("/");
+    revalidatePath("/packages");
+    revalidatePath(`/packages/${pkg.slug}`);
+
     return NextResponse.json({ data: pkg });
   } catch (error) {
     if (
@@ -87,6 +93,10 @@ export async function DELETE(
 
   try {
     await deletePackage(id);
+
+    revalidatePath("/");
+    revalidatePath("/packages");
+
     return NextResponse.json({ success: true });
   } catch (error) {
     if (

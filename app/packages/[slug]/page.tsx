@@ -12,6 +12,8 @@ import { getPackageBySlug, listPackages } from "@/lib/package-service";
 import { Button } from "@/components/ui/button";
 import { generateWhatsAppMessage } from "@/lib/data";
 
+export const dynamic = "force-dynamic";
+
 export async function generateMetadata({
   params,
 }: {

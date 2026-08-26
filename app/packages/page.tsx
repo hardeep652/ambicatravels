@@ -9,6 +9,8 @@ export const metadata: Metadata = {
   description: "Browse our curated domestic and international holiday packages. From Bali to Switzerland, find your perfect getaway.",
 };
 
+export const dynamic = "force-dynamic";
+
 export default function PackagesPage() {
   return (
     <>
