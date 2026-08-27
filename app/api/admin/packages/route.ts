@@ -1,5 +1,6 @@
 import { Prisma } from "@prisma/client";
 import { NextResponse } from "next/server";
+import { revalidatePath } from "next/cache";
 import { auth } from "@/lib/auth";
 import { createPackage, listAdminPackages } from "@/lib/package-service";
 import { packageSchema } from "@/schemas/package.schema";
@@ -41,6 +42,11 @@ export async function POST(request: Request) {
 
   try {
     const pkg = await createPackage(parsed.data);
+
+    revalidatePath("/");
+    revalidatePath("/packages");
+    revalidatePath(`/packages/${pkg.slug}`);
+
     return NextResponse.json({ data: pkg }, { status: 201 });
   } catch (error) {
     if (
