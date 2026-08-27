@@ -99,7 +99,14 @@ export function Footer() {
             <ul className="mt-5 space-y-3.5 text-sm text-white/60">
               <li className="flex items-start gap-3">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
-                <span>{CONTACT.address}</span>
+                <span>
+                  {CONTACT.address.map((addr, i) => (
+                    <React.Fragment key={i}>
+                      {addr}
+                      {i < CONTACT.address.length - 1 && <br />}
+                    </React.Fragment>
+                  ))}
+                </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-4 w-4 shrink-0 text-emerald-400" />

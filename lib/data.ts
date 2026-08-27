@@ -258,7 +258,10 @@ export const CONTACT = {
   phone: "+91-7203035985",
   whatsapp: "+91 7203035985",
   email: "info@ambikatravels.com",
-  address: "403 4th floor, Dream Square, complex, under bridge, opp. Ramdevpir mandir, Akhbar Nagar, Nirnay Nagar, Ahmedabad, Gujarat 380013",
+  address: [
+    "403, 4th Floor, Dream Square Complex, Opp. Ramdevpir Mandir, Nr. Nirnaynagar Underbridge, Nirnaynagar, Ahmedabad - 382481.",
+    "H.No. 14/45/A-1, G 18, Ground Floor, Dilip Empire, Tin Batti, Daman - 396210.",
+  ],
   mapsEmbedSrc:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.918!2d72.5566!3d23.0339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDAyJzAyLjAiTiA3MsKwMzMnMjMuOCJF!5e0!3m2!1sen!2sin!4v1700000000000",
 };
