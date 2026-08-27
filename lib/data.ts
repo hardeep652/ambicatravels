@@ -374,12 +374,6 @@ export const FAQS: FAQItem[] = [
       "Cancellation terms depend on the hotels, airlines, and transport booked for your specific trip, since each has its own policy. We always share the exact terms in writing before you confirm payment.",
   },
   {
-    id: "visa",
-    question: "Do you help with visas for international trips?",
-    answer:
-      "Yes — we assist with documentation, application forms, and appointment scheduling. Visa approval itself is at the consulate's discretion, but we make sure your file is complete and submitted correctly.",
-  },
-  {
     id: "transport-only",
     question: "Can you arrange transport only, without a full package?",
     answer:
