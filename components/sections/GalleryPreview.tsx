@@ -57,7 +57,7 @@ export function GalleryPreview() {
                 />
                 <span className="absolute inset-0 bg-gradient-to-t from-navy-900/60 via-navy-900/0 to-navy-900/0 transition-opacity duration-300 group-hover:from-navy-900/70" />
                 <span className="absolute bottom-3 left-3 right-3 text-xs font-medium text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  {item.title} · {item.location}
+                  {item.title}
                 </span>
               </Link>
             </motion.div>

@@ -58,7 +58,7 @@ export const SERVICES: ServiceItem[] = [
     id: "car-rental",
     title: "Car Rental",
     description:
-      "Self-drive or chauffeur-driven cars, sanitised and serviced, ready whenever your journey begins.",
+      "Chauffeur-driven cars, sanitised and serviced, ready whenever your journey begins.",
     icon: "car",
     image:
       "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1600&auto=format&fit=crop",
@@ -82,7 +82,7 @@ export const SERVICES: ServiceItem[] = [
     icon: "package",
     image:
       "https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=1600&auto=format&fit=crop",
-    features: ["Custom itineraries", "Visa assistance", "24x7 trip support"],
+    features: ["Custom itineraries", "24x7 trip support"],
   },
 ];
 
@@ -258,7 +258,7 @@ export const CONTACT = {
   phone: "+91-7203035985",
   whatsapp: "+91 7203035985",
   email: "info@ambikatravels.com",
-  address: "204, Shanti Arcade, C.G. Road, Navrangpura, Ahmedabad, Gujarat 403 4th floor, Dream Square, complex, under bridge, opp. Ramdevpir mandir, Akhbar Nagar, Nirnay Nagar, Ahmedabad, Gujarat 380013",
+  address: "403 4th floor, Dream Square, complex, under bridge, opp. Ramdevpir mandir, Akhbar Nagar, Nirnay Nagar, Ahmedabad, Gujarat 380013",
   mapsEmbedSrc:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.918!2d72.5566!3d23.0339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDAyJzAyLjAiTiA3MsKwMzMnMjMuOCJF!5e0!3m2!1sen!2sin!4v1700000000000",
 };

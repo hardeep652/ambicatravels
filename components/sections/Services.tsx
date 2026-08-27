@@ -35,7 +35,7 @@ const SERVICE_META: Record<
   "car-rental": {
     scope: "Point-to-point",
     bestFor: "Airport runs, client visits, weekend drives out of the city",
-    included: "Sedan to SUV, self-drive or with a driver",
+    included: "Sedan to SUV",
     timeline: "Confirmed same day for most routes",
   },
   "bus-rental": {
