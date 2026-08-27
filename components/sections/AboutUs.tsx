@@ -9,7 +9,7 @@ export function AboutUs() {
         <SectionHeading
           eyebrow="Our Story"
           title="About Ambica Travels"
-          description="15+ years of crafting memorable journeys for families, corporates, and solo travelers across Gujarat and beyond."
+          description="27+ years of crafting memorable journeys for families, corporates, and solo travelers across Gujarat and beyond."
         />
 
         <div className="mt-14 grid gap-10 md:grid-cols-2 items-center">

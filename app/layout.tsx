@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s | Ambica Travels",
   },
   description:
-    "Ambica Travels plans car rentals, bus rentals and fully-escorted domestic & international holiday packages from Ahmedabad, Gujarat. 15+ years, 25,000+ happy travelers.",
+    "Ambica Travels plans car rentals, bus rentals and fully-escorted domestic & international holiday packages from Ahmedabad, Gujarat. 27+ years, 25,000+ happy travelers.",
   keywords: [
     "Ambica Travels",
     "travel agency Ahmedabad",

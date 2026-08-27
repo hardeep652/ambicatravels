@@ -14,7 +14,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Ambica Travels | Car Rental, Bus Rental & Holiday Packages",
   description:
-    "Ambica Travels plans car rentals, bus rentals and fully-escorted domestic & international holiday packages from Ahmedabad, Gujarat. 15+ years, 25,000+ happy travelers.",
+    "Ambica Travels plans car rentals, bus rentals and fully-escorted domestic & international holiday packages from Ahmedabad, Gujarat. 27+ years, 25,000+ happy travelers.",
 };
 
 export default function Home() {

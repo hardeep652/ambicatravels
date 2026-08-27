@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { Phone, X, Loader2, CheckCircle, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { CONTACT } from "@/lib/data";
+import { CONTACT, encodeMessage } from "@/lib/data";
 
 export function FloatingCallback() {
   const pathname = usePathname();
@@ -33,8 +33,12 @@ export function FloatingCallback() {
         body: JSON.stringify({ mobile }),
       });
       if (res.ok) {
+        const whatsappUrl = `https://wa.me/${CONTACT.phone.replace(/\D/g, "")}?text=${encodeMessage(
+          `Callback request. Mobile: ${mobile}`
+        )}`;
+        window.open(whatsappUrl, "_blank", "noopener,noreferrer");
         setStatus("success");
-        setMessage("We'll call you within 5 minutes!");
+        setMessage("Redirecting to WhatsApp...");
         setMobile("");
         setTimeout(() => {
           setIsOpen(false);

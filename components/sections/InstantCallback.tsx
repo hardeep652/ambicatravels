@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Phone, CheckCircle, Loader2, Shield } from "lucide-react";
 import { Reveal } from "@/components/ui/reveal";
 import { Button } from "@/components/ui/button";
-import { CONTACT } from "@/lib/data";
+import { CONTACT, encodeMessage } from "@/lib/data";
 
 export function InstantCallback() {
   const [mobile, setMobile] = useState("");
@@ -26,8 +26,12 @@ export function InstantCallback() {
         body: JSON.stringify({ mobile }),
       });
       if (res.ok) {
+        const whatsappUrl = `https://wa.me/${CONTACT.phone.replace(/\D/g, "")}?text=${encodeMessage(
+          `Callback request. Mobile: ${mobile}`
+        )}`;
+        window.open(whatsappUrl, "_blank", "noopener,noreferrer");
         setStatus("success");
-        setMessage("We'll call you within 5 minutes!");
+        setMessage("Redirecting to WhatsApp...");
         setMobile("");
       } else {
         setStatus("error");
@@ -97,11 +101,18 @@ export function InstantCallback() {
               </Button>
             </form>
 
-            {message && (
+            {status === "success" && (
               <p
-                className={`mt-4 text-center text-sm font-medium transition-colors ${
-                  status === "success" ? "text-emerald-600" : "text-red-600"
-                }`}
+                className="mt-4 text-center text-sm font-medium text-emerald-600 transition-colors"
+                role="alert"
+              >
+                Redirecting to WhatsApp...
+              </p>
+            )}
+
+            {status === "error" && (
+              <p
+                className="mt-4 text-center text-sm font-medium text-red-600 transition-colors"
                 role="alert"
               >
                 {message}

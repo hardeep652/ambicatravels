@@ -49,7 +49,7 @@ export const HERO_SLIDES = [
 export const STATS: StatItem[] = [
   { id: "travelers", value: 25000, suffix: "+", label: "Happy Travelers" },
   { id: "destinations", value: 120, suffix: "+", label: "Destinations Covered" },
-  { id: "years", value: 15, suffix: "+", label: "Years of Trust" },
+  { id: "years", value: 27, suffix: "+", label: "Years of Trust" },
   { id: "rating", value: 4.9, suffix: "/5", label: "Average Rating" },
 ];
 
@@ -89,9 +89,9 @@ export const SERVICES: ServiceItem[] = [
 export const WHY_CHOOSE_US: WhyChooseItem[] = [
   {
     id: "trusted",
-    title: "15+ Years of Trust",
+    title: "27+ Years of Trust",
     description:
-      "A name Gujarat has relied on since 2009, built purely on referrals and repeat travelers.",
+      "A name Gujarat has relied on since 1999, built purely on referrals and repeat travelers.",
     icon: "shield",
   },
   {
@@ -267,7 +267,7 @@ export const CONTACT = {
 // WhatsApp "Plan This Trip" helper
 // ---------------------------------------------------------------------------
 
-function encodeMessage(text: string): string {
+export function encodeMessage(text: string): string {
   return encodeURIComponent(text).replace(/%20/g, "+");
 }
 
