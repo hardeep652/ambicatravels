@@ -70,14 +70,14 @@ export function FloatingCallback() {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 z-50 h-16 w-16 rounded-full bg-emerald-500 shadow-xl flex items-center justify-center text-white transition-all duration-300 hover:bg-emerald-600 hover:scale-105 hover:shadow-[0_0_0_4px_rgba(16,185,129,0.3)] focus:outline-none focus:ring-4 focus:ring-emerald-200 active:scale-95"
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 h-14 w-14 sm:h-16 sm:w-16 rounded-full bg-emerald-500 shadow-xl flex items-center justify-center text-white transition-all duration-300 hover:bg-emerald-600 hover:scale-105 hover:shadow-[0_0_0_4px_rgba(16,185,129,0.3)] focus:outline-none focus:ring-4 focus:ring-emerald-200 active:scale-95"
         aria-label="Request a callback"
         aria-expanded={isOpen}
       >
         {isOpen ? (
-          <X className="h-7 w-7" />
+          <X className="h-6 w-6 sm:h-7 sm:w-7" />
         ) : (
-          <Phone className="h-7 w-7" />
+          <Phone className="h-6 w-6 sm:h-7 sm:w-7" />
         )}
         <span className="absolute -top-2 -right-2 h-5 w-5 rounded-full bg-red-500 text-[10px] font-bold flex items-center justify-center animate-pulse">
           ?
@@ -85,7 +85,7 @@ export function FloatingCallback() {
       </button>
 
       {isOpen && (
-        <div className="fixed bottom-6 right-6 z-50 w-full max-w-sm animate-slide-up" role="dialog" aria-label="Instant Callback" aria-modal="true">
+        <div className="fixed bottom-20 right-4 sm:bottom-6 sm:right-6 z-50 w-[calc(100%-2rem)] sm:w-full max-w-sm animate-slide-up" role="dialog" aria-label="Instant Callback" aria-modal="true">
           <div className="bg-white rounded-2xl shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] overflow-hidden border border-navy-100">
             <div className="bg-navy-900 px-5 py-4 flex items-center justify-between">
               <div className="flex items-center gap-3">

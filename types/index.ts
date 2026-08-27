@@ -14,7 +14,7 @@ export interface ServiceItem {
   id: string;
   title: string;
   description: string;
-  icon: "car" | "bus" | "package";
+  icon: "car" | "bus" | "package" | "hotel" | "plane";
   image: string;
   features: string[];
 }

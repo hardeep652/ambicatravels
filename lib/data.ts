@@ -71,7 +71,7 @@ export const SERVICES: ServiceItem[] = [
       "Comfortable mini-buses and coaches for group tours, weddings, corporate offsites and pilgrimages.",
     icon: "bus",
     image:
-      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1600&auto=format&fit=crop",
+      "https://res.cloudinary.com/ozr2ckrb/image/upload/v1787823692/WhatsApp_Image_2026-08-27_at_3.10.58_PM.jpg",
     features: ["12 to 45 seater fleet", "Experienced drivers", "Pan-India routes"],
   },
   {
@@ -83,6 +83,26 @@ export const SERVICES: ServiceItem[] = [
     image:
       "https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=1600&auto=format&fit=crop",
     features: ["Custom itineraries", "24x7 trip support"],
+  },
+  {
+    id: "hotel-booking",
+    title: "Hotel Booking",
+    description:
+      "Comfortable stays at verified hotels and resorts, tailored to your budget and preferences.",
+    icon: "hotel",
+    image:
+      "https://res.cloudinary.com/ozr2ckrb/image/upload/v1787843249/ChatGPT_Image_Aug_27_2026_08_37_13_PM.png",
+    features: ["Verified properties", "Flexible cancellation", "24x7 support"],
+  },
+  {
+    id: "flight-booking",
+    title: "Flight Booking",
+    description:
+      "Flight tickets and itinerary planning for domestic and international destinations.",
+    icon: "plane",
+    image:
+      "https://res.cloudinary.com/ozr2ckrb/image/upload/v1787843320/ChatGPT_Image_Aug_27_2026_08_38_27_PM.png",
+    features: ["Best fares", "Itinerary support", "24x7 assistance"],
   },
 ];
 

@@ -111,7 +111,7 @@ export default async function PackageDetailPage({
         </section>
 
         <section className="section-py bg-white">
-          <div className="container-px mx-auto grid max-w-[90rem] gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(430px,520px)] lg:items-start xl:grid-cols-[minmax(0,0.85fr)_minmax(480px,560px)] xl:gap-14">
+          <div className="container-px mx-auto grid max-w-[90rem] gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(320px,520px)] lg:items-start xl:grid-cols-[minmax(0,0.85fr)_minmax(440px,560px)] xl:gap-14">
             <div className="min-w-0">
               <div>
                 <h2 className="font-heading text-2xl font-semibold text-navy-900">Overview</h2>

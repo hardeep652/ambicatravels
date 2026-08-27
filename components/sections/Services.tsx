@@ -9,7 +9,10 @@ import {
   Car,
   Check,
   ChevronRight,
+  Folder,
+  Plane,
   Headphones,
+  Hotel,
   Package,
   type LucideIcon,
 } from "lucide-react";
@@ -21,6 +24,8 @@ const ICONS: Record<ServiceItem["icon"], LucideIcon> = {
   car: Car,
   bus: Bus,
   package: Package,
+  hotel: Hotel,
+  plane: Plane,
 };
 
 const SERVICE_META: Record<
@@ -49,6 +54,18 @@ const SERVICE_META: Record<
     bestFor: "Family holidays, honeymoons, first trips abroad",
     included: "Flights, stay, transfers, and a day-by-day plan",
     timeline: "First itinerary draft within a few days",
+  },
+  "hotel-booking": {
+    scope: "Accommodation",
+    bestFor: "Family holidays, honeymoons, city trips",
+    included: "Hotel stay with breakfast, flexible check-in/out",
+    timeline: "Confirmation within 24-48 hours",
+  },
+  "flight-booking": {
+    scope: "Air travel",
+    bestFor: "Domestic and international trips",
+    included: "Economy class tickets, itinerary planning",
+    timeline: "Ticket confirmation within 24 hours",
   },
 };
 
@@ -104,11 +121,11 @@ export function Services() {
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 1.1, ease: [0.65, 0, 0.35, 1] }}
             />
-            <div className="relative grid grid-cols-3">
+            <div className="relative grid grid-cols-5 items-center">
               {SERVICES.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  className="flex justify-start"
+                  className="flex items-center"
                   style={{
                     justifyContent:
                       index === 0 ? "flex-start" : index === SERVICES.length - 1 ? "flex-end" : "center",
@@ -123,7 +140,7 @@ export function Services() {
               ))}
             </div>
           </div>
-          <div className="mt-3 grid grid-cols-3">
+          <div className="mt-3 grid grid-cols-5">
             {SERVICES.map((service, index) => (
               <p
                 key={service.id}
@@ -173,7 +190,11 @@ export function Services() {
                         ? "/car-rental"
                         : service.id === "bus-rental"
                           ? "/bus-rental"
-                          : "/contact"
+                          : service.id === "holiday-packages"
+                            ? "/contact"
+                            : service.id === "hotel-booking"
+                              ? "/hotel-rental"
+                              : "/flight-booking"
                     }
                     className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-sky-600 transition-colors hover:text-sky-700"
                   >

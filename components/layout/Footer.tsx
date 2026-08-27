@@ -22,7 +22,7 @@ export function Footer() {
   return (
     <footer id="contact" className="bg-navy-950 text-white">
       <div className="container-px mx-auto max-w-7xl pb-10 pt-20">
-        <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr_0.8fr_1fr_1.2fr]">
+        <div className="grid gap-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-[1.2fr_0.8fr_0.8fr_1fr_1.2fr]">
           {/* Brand */}
           <div>
             <div className="flex items-center">
