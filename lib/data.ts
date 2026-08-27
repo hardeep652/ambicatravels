@@ -263,7 +263,8 @@ export const CONTACT = {
     "H.No. 14/45/A-1, G 18, Ground Floor, Dilip Empire, Tin Batti, Daman - 396210.",
   ],
   mapsEmbedSrc:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.918!2d72.5566!3d23.0339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDAyJzAyLjAiTiA3MsKwMzMnMjMuOCJF!5e0!3m2!1sen!2sin!4v1700000000000",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d471.1589856628941!2d72.5585841!3d23.0709961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e837eb30aa575%3A0xefea6efde623683b!2sAmbica%20Travels!5e0!3m2!1sen!2sin!4v1700000000000",
+  mapsLink: "https://maps.app.goo.gl/YdPdxwgvQjTKLweg6",
 };
 
 // ---------------------------------------------------------------------------

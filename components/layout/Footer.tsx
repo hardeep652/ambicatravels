@@ -22,7 +22,7 @@ export function Footer() {
   return (
     <footer id="contact" className="bg-navy-950 text-white">
       <div className="container-px mx-auto max-w-7xl pb-10 pt-20">
-        <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr_0.8fr_1.2fr]">
+        <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr_0.8fr_1fr_1.2fr]">
           {/* Brand */}
           <div>
             <div className="flex items-center">
@@ -86,8 +86,39 @@ export function Footer() {
               <li>Car Rental</li>
               <li>Bus Rental</li>
               <li>Holiday Packages</li>
-              <li>Visa Assistance</li>
               <li>Corporate Travel</li>
+            </ul>
+          </div>
+
+          {/* Our Offices */}
+          <div>
+            <h3 className="font-heading text-sm font-semibold uppercase tracking-wider text-white/90">
+              Our Offices
+            </h3>
+            <ul className="mt-5 space-y-5 text-sm text-white/60">
+              <li className="flex items-start gap-3">
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
+                <div>
+                  <p className="mb-1 font-semibold text-white/80">Ahmedabad</p>
+                  <address className="not-italic leading-relaxed">
+                    403, 4th Floor, Dream Square Complex,<br />
+                    Opp. Ramdevpir Mandir,<br />
+                    Nr. Nirnaynagar Underbridge,<br />
+                    Nirnaynagar, Ahmedabad&nbsp;&ndash;&nbsp;382481.
+                  </address>
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
+                <div>
+                  <p className="mb-1 font-semibold text-white/80">Daman</p>
+                  <address className="not-italic leading-relaxed">
+                    H.No. 14/45/A-1, G-18,<br />
+                    Ground Floor, Dilip Empire,<br />
+                    Tin Batti, Daman&nbsp;&ndash;&nbsp;396210.
+                  </address>
+                </div>
+              </li>
             </ul>
           </div>
 
@@ -97,16 +128,6 @@ export function Footer() {
               Get in Touch
             </h3>
             <ul className="mt-5 space-y-3.5 text-sm text-white/60">
-              <li className="flex items-start gap-3">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
-                <span>
-                  {CONTACT.address.map((addr, i) => {
-                    if (i === 0) return addr;
-                    if (i < CONTACT.address.length - 1) return <br />;
-                    return null;
-                  })}
-                </span>
-              </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-4 w-4 shrink-0 text-emerald-400" />
                 <a
@@ -124,17 +145,23 @@ export function Footer() {
               </li>
             </ul>
 
-            <div className="mt-5 overflow-hidden rounded-2xl ring-1 ring-white/10">
-              <iframe
-                title="Ambica Travels location on Google Maps"
-                src={CONTACT.mapsEmbedSrc}
-                width="100%"
-                height="160"
-                style={{ border: 0 }}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
+            <a
+                href={CONTACT.mapsLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-5 block overflow-hidden rounded-2xl ring-1 ring-white/10 transition-opacity hover:opacity-90"
+                aria-label="Open Ambica Travels location in Google Maps"
+              >
+                <iframe
+                  title="Ambica Travels location on Google Maps"
+                  src={CONTACT.mapsEmbedSrc}
+                  width="100%"
+                  height="160"
+                  style={{ border: 0, pointerEvents: "none" }}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </a>
           </div>
         </div>
 
