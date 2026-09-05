@@ -30,6 +30,15 @@ export function CTABanner() {
             Tell us where you want to go — we&apos;ll reply within one working
             day with a tailored itinerary and clear pricing.
           </p>
+          <p className="mt-4 text-base font-semibold text-white/90">
+            Or call us directly:{" "}
+            <a
+              href={`tel:${CONTACT.phone.replace(/\s/g, "")}`}
+              className="text-emerald-300 underline underline-offset-4 hover:text-emerald-200"
+            >
+              {CONTACT.phone}
+            </a>
+          </p>
         </Reveal>
 
         <Reveal delay={0.1} className="flex w-full flex-col gap-4 sm:w-auto sm:flex-row">

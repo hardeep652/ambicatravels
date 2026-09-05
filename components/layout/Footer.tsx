@@ -31,7 +31,7 @@ export function Footer() {
                 alt="Ambica Travels logo"
                 width={170}
                 height={50}
-                className="h-10 w-auto object-contain [filter:drop-shadow(0_2px_8px_rgba(255,255,255,0.15))]"
+                className="h-10 w-auto object-contain md:h-14 [filter:drop-shadow(0_2px_8px_rgba(255,255,255,0.15))]"
               />
             </div>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/60">

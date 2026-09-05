@@ -20,158 +20,6 @@ const SLIDE_DURATION = 6000;
 // crossfade below, so slide changes never interrupt it.
 const ZOOM_DURATION = 28; // seconds, within the requested 25–30s range
 
-// Signature moment: passport stamps landing in the open airspace to the
-// right of the headline — never crossing the text block. Cycles in sync
-// every STAMP_CYCLE ms, like a passport page filling up one trip at a time.
-const STAMP_CYCLE = 5500; // ms between stamp turns
-
-type Stamp = {
-  destination: string;
-  code: string; // faux customs reference, e.g. flight/route code
-  ink: "emerald" | "amber";
-};
-
-const STAMPS: Stamp[] = [
-  { destination: "DUBAI", code: "AMD–DXB", ink: "emerald" },
-  { destination: "SINGAPORE", code: "AMD–SIN", ink: "amber" },
-  { destination: "BALI", code: "AMD–DPS", ink: "emerald" },
-  { destination: "SWITZERLAND", code: "AMD–ZRH", ink: "amber" },
-  { destination: "KERALA", code: "AMD–COK", ink: "emerald" },
-  { destination: "GOA", code: "AMD–GOI", ink: "amber" },
-];
-
-const SLOTS = [
-  { top: "10%", right: "20%", scale: 1, rotate: -6 },
-  { top: "34%", right: "5%", scale: 0.82, rotate: 8 },
-  { top: "58%", right: "24%", scale: 0.94, rotate: -10 },
-  { top: "76%", right: "8%", scale: 0.74, rotate: 5 },
-];
-
-const INK_COLORS: Record<Stamp["ink"], string> = {
-  emerald: "#34D399",
-  amber: "#F59E0B",
-};
-
-function StampMark({
-  stamp,
-  slot,
-  slotIndex,
-}: {
-  stamp: Stamp;
-  slot: (typeof SLOTS)[number];
-  slotIndex: number;
-}) {
-  const arcId = `stamp-arc-${slotIndex}`;
-  const color = INK_COLORS[stamp.ink];
-
-  return (
-    <motion.div
-      className="absolute select-none"
-      style={{ top: slot.top, right: slot.right }}
-      initial={{ scale: slot.scale * 1.7, opacity: 0, rotate: slot.rotate - 10 }}
-      animate={{ scale: slot.scale, opacity: 1, rotate: slot.rotate }}
-      exit={{ opacity: 0, scale: slot.scale * 0.9 }}
-      transition={{ type: "spring", stiffness: 210, damping: 15 }}
-    >
-      <svg
-        width="150"
-        height="150"
-        viewBox="0 0 150 150"
-        style={{ filter: "url(#stamp-ink-bleed)" }}
-      >
-        <defs>
-          <path id={`${arcId}-top`} d="M 26 82 A 49 49 0 1 1 124 82" fill="none" />
-        </defs>
-
-        <circle cx="75" cy="75" r="63" fill="none" stroke={color} strokeWidth="2.5" opacity={0.85} />
-        <circle
-          cx="75"
-          cy="75"
-          r="52"
-          fill="none"
-          stroke={color}
-          strokeWidth="1.2"
-          strokeDasharray="2 4"
-          opacity={0.6}
-        />
-
-        <text fontSize="13" fontWeight={700} letterSpacing="2" fill={color} opacity={0.95}>
-          <textPath href={`#${arcId}-top`} startOffset="50%" textAnchor="middle">
-            {stamp.destination}
-          </textPath>
-        </text>
-
-        <text
-          x="75"
-          y="80"
-          textAnchor="middle"
-          fontSize="9"
-          fontWeight={600}
-          letterSpacing="1.5"
-          fill={color}
-          opacity={0.9}
-        >
-          {stamp.code}
-        </text>
-        <text
-          x="75"
-          y="94"
-          textAnchor="middle"
-          fontSize="7"
-          letterSpacing="2"
-          fill={color}
-          opacity={0.75}
-        >
-          ARRIVED · EST. 1999
-        </text>
-      </svg>
-    </motion.div>
-  );
-}
-
-function PassportStamps() {
-  const [turn, setTurn] = useState(0);
-
-  useEffect(() => {
-    const id = setInterval(() => setTurn((t) => t + 1), STAMP_CYCLE);
-    return () => clearInterval(id);
-  }, []);
-
-  return (
-    <svg
-      aria-hidden
-      className="pointer-events-none absolute inset-0 hidden h-full w-full lg:block"
-      style={{ position: "absolute" }}
-    >
-      {/* Ink-bleed texture, referenced by every stamp via CSS filter */}
-      <defs>
-        <filter id="stamp-ink-bleed" x="-30%" y="-30%" width="160%" height="160%">
-          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="noise" />
-          <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.2" />
-        </filter>
-      </defs>
-
-      <foreignObject x="0" y="0" width="100%" height="100%">
-        <div style={{ position: "relative", width: "100%", height: "100%" }}>
-          <AnimatePresence mode="popLayout">
-            {SLOTS.map((slot, i) => {
-              const stamp = STAMPS[(turn + i) % STAMPS.length];
-              return (
-                <StampMark
-                  key={`${i}-${turn}`}
-                  stamp={stamp}
-                  slot={slot}
-                  slotIndex={i}
-                />
-              );
-            })}
-          </AnimatePresence>
-        </div>
-      </foreignObject>
-    </svg>
-  );
-}
-
 export function Hero() {
   const [index, setIndex] = useState(0);
   const [finePointer, setFinePointer] = useState(false);
@@ -263,8 +111,6 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-navy-950/60 via-transparent to-transparent" />
       </div>
 
-      {!shouldReduceMotion && <PassportStamps />}
-
       <div className="container-px relative mx-auto max-w-7xl pt-28 pb-24">
         <motion.span
           initial={{ opacity: 0, y: -16 }}
@@ -282,22 +128,27 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           className="mt-7 max-w-3xl text-4xl font-semibold leading-[1.08] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-[4.25rem]"
         >
-          Journeys crafted with care, from the first call to{" "}
-          <span className="bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text text-transparent">
-            the final mile
-          </span>
-          .
+          Plan Your Trip.
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+          transition={{ duration: 0.8, delay: 0.35, ease: "easeOut" }}
+          className="mt-4 max-w-xl text-2xl font-medium leading-relaxed text-emerald-300 sm:text-3xl"
+        >
+          We&apos;ll Handle the Rest.
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
           className="mt-6 max-w-xl text-base leading-relaxed text-white/75 sm:text-lg"
         >
-          Car rentals, coach hire, and fully-escorted holiday packages —
-          planned by people who&apos;ve actually been there, backed by support
-          that doesn&apos;t stop when you land.
+          Car rentals, holiday packages, flights and hotels — everything you need
+          for a smooth journey, all in one place. Just tell us your plan and we
+          will take care of the rest.
         </motion.p>
 
         <motion.div

@@ -61,7 +61,7 @@ export function Navbar() {
               height={50}
               className={cn(
                 "object-contain transition-all duration-400 ease-out group-hover:scale-105 [filter:drop-shadow(0_2px_8px_rgba(15,23,42,0.18))]",
-                scrolled ? "h-8 w-auto" : "h-10 w-auto"
+                scrolled ? "h-14 md:h-22" : "h-16 md:h-24"
               )}
             />
           </Link>
